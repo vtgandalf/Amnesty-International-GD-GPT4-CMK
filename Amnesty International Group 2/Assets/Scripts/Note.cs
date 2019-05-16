@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Note
 {
-    public string Name { get; private set; }
-    public string Entry { get; private set; }
+    public string Name;
+    public string Entry;
 
     public Note(string name, string entry)
     {

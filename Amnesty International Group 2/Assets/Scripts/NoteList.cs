@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class NoteManager : ScriptableObject
+public class NoteList : ScriptableObject
 {
     public List<Note> Notes = new List<Note>();
 }
