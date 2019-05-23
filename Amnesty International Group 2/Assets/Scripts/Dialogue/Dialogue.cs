@@ -7,5 +7,5 @@ public class Dialogue : ScriptableObject
 {
     public CharacterInfo[] charactersInfo;
     public Message[] messages;
-    public Note note;
+    public JournalEntry note;
 }

@@ -48,3 +48,6 @@ TagManager:
   - name: Character
     uniqueID: 2911123407
     locked: 0
+  - name: Emotes
+    uniqueID: 3209762797
+    locked: 0

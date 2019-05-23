@@ -10,9 +10,8 @@ public class CameraMovement : MonoBehaviour
     public float maxSpeed;
 
     private Vector3 velocity;
-
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
         if (Target != null)
             transform.position = Vector3.SmoothDamp(transform.position, Target.position + TargetOffset, ref velocity, smoothTime, maxSpeed);

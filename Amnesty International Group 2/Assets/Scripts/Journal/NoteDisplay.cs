@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Might use another class for UI due to changes in Journal
 public class NoteDisplay : MonoBehaviour
 {
     [SerializeField] private TMPro.TextMeshProUGUI noteName;
     [SerializeField] private TMPro.TextMeshProUGUI noteEntry;
-    [SerializeField] private NoteList noteList;
+    [SerializeField] private JournalData journal;
 
     public bool loop = true;
     private int currentIndex = 0;
 
     private void Awake()
     {
-        if (noteList.Notes.Count <= 0)
+        if (journal.Entries.Count <= 0)
             return;
 
         DisplayCurrentNote();
@@ -21,8 +22,8 @@ public class NoteDisplay : MonoBehaviour
 
     private void SetIndexInBounds()
     {
-        if (currentIndex > noteList.Notes.Count - 1)
-            currentIndex = noteList.Notes.Count - 1;
+        if (currentIndex > journal.Entries.Count - 1)
+            currentIndex = journal.Entries.Count - 1;
         else if (currentIndex < 0)
             currentIndex = 0;
     }
@@ -31,18 +32,18 @@ public class NoteDisplay : MonoBehaviour
     {
         SetIndexInBounds();
 
-        Note currentNote = noteList.Notes[currentIndex];
+        JournalEntry currentNote = journal.Entries[currentIndex];
         noteName.text = currentNote.Name;
         noteEntry.text = currentNote.Entry;
     }
 
     public void NextNote()
     {
-        if (noteList.Notes.Count <= 0)
+        if (journal.Entries.Count <= 0)
             return;
 
         currentIndex++;
-        if (loop && currentIndex > noteList.Notes.Count - 1)
+        if (loop && currentIndex > journal.Entries.Count - 1)
             currentIndex = 0;
 
         DisplayCurrentNote();
@@ -50,12 +51,12 @@ public class NoteDisplay : MonoBehaviour
 
     public void PreviousNote()
     {
-        if (noteList.Notes.Count <= 0)
+        if (journal.Entries.Count <= 0)
             return;
 
         currentIndex--;
         if (loop && currentIndex < 0)
-            currentIndex = noteList.Notes.Count - 1;
+            currentIndex = journal.Entries.Count - 1;
 
         DisplayCurrentNote();
     }
