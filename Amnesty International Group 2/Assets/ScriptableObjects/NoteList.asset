@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e90795c0ec69f41830c039492a3a24, type: 3}
+  m_Name: NoteList
+  m_EditorClassIdentifier: 
+  Notes:
+  - Name: I made a bad copypasta into a bad rap
+    Entry: "Okay, I know this is a really bad idea but I'm already here so Here we
+      fuckin\x19 go Rawr  \vx3 nuzzles! pounces on you uwu you so warm (Ooo) Couldn't
+      help but notice your bulge from across the floor Nuzzles yo' necky wecky-tilde
+      murr-tilde hehe Unzips yo baggy ass pants, oof baby you so musky Take me home,
+      pet me, \x19n' make me yours and don't forget to stuff me! See me wag my widdle
+      baby tail all for your buldgy-wuldgy! Kissies 'n' lickies yo neck I hope daddy
+      likies Nuzzles 'n' wuzzles yo chest (yuh) I be (yeah) gettin' thirsty  Hey,
+      I got a little itch, you think you can help me? Only seven inches long uwu,
+      PLEASE ADOPT ME Paws on your buldge as I lick my lips (UwU punish me please)
+      \x19Boutta hit \x19em with this furry shit (He don't see it comin\x19)"
+  - Name: Title 2
+    Entry: TEXTTEXTTEXT
+  - Name: Title 3
+    Entry: TEXTTEXTTEXTTEXTTEXTTEXTTEXT
+  - Name: Title 4
+    Entry: TEXTTEXTTEXTTEXT
