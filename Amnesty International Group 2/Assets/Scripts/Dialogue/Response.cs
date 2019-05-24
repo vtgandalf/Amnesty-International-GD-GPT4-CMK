@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class Response
 {
-    public string reply;
+    public string text;
     public int charId;
 }

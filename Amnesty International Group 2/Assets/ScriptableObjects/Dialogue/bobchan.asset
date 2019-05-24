@@ -9,37 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4936ab212f89e8b45978d1e5c3b14bfc, type: 3}
-  m_Name: TestingDialogue
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: bobchan
   m_EditorClassIdentifier: 
   charactersInfo:
   - {fileID: 11400000, guid: e5d24cfc2401ed44b9a1ffb4fa47985f, type: 2}
   - {fileID: 11400000, guid: 73183c38b49c36343a51c228a8cb2250, type: 2}
   messages:
-  - charId: 0
-    text:
-    - hello
-    responses: []
   - charId: 1
     text:
-    - hi
-    responses: []
-  - charId: 1
-    text:
-    - waddup
+    - owo
+    - uwu
     responses: []
   - charId: 0
     text:
-    - my dad tell to man up
+    - :)
     responses: []
   - charId: 1
     text:
-    - 
-    - 
-    responses: []
-  - charId: 0
-    text:
-    - bye
+    - .i.
     responses: []
   note:
     Name: 
