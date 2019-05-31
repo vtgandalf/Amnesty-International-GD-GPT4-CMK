@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 976142279
+    locked: 0
+  - name: Character
+    uniqueID: 2911123407
+    locked: 0
+  - name: Emotes
+    uniqueID: 3209762797
     locked: 0
