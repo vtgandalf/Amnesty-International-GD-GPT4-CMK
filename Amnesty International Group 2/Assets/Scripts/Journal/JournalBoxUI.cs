@@ -14,6 +14,8 @@ public class JournalBoxUI : MonoBehaviour
     // Start is called before the first frame update
     public Text textOfPage1;
     public Text textOfPage2;
+    public GameObject titleOfPage1;
+    public GameObject titleOfPage2;
     private Tabs currentTab = Tabs.Stories;
     private int pageIndex = 0;
     public JournalData journalData;
@@ -33,6 +35,8 @@ public class JournalBoxUI : MonoBehaviour
     {
         currentTab = Tabs.Relevant;
         pageIndex = 0;
+        titleOfPage1.SetActive(false);
+        titleOfPage2.SetActive(false);
         DisplayText();
     }
 
@@ -40,6 +44,8 @@ public class JournalBoxUI : MonoBehaviour
     {
         currentTab = Tabs.Quests;
         pageIndex = 0;
+        titleOfPage1.SetActive(false);
+        titleOfPage2.SetActive(false);
         DisplayText();
     }
 
@@ -47,6 +53,8 @@ public class JournalBoxUI : MonoBehaviour
     {
         currentTab = Tabs.Stories;
         pageIndex = 0;
+        titleOfPage1.SetActive(true);
+        titleOfPage2.SetActive(true);
         DisplayText();
     }
 
@@ -90,6 +98,8 @@ public class JournalBoxUI : MonoBehaviour
     {
         string text1 = null;
         string text2 = null;
+        titleOfPage1.GetComponent<Text>().text = null;
+        titleOfPage2.GetComponent<Text>().text = null;
         switch (currentTab)
         {
             case Tabs.Relevant:
@@ -107,10 +117,12 @@ public class JournalBoxUI : MonoBehaviour
                 if (journalData.Stories[pageIndex] != null)
                 {
                     text1 = journalData.Stories[pageIndex].Entry;
+                    titleOfPage1.GetComponent<Text>().text = journalData.Stories[pageIndex].Name;
                 }
                 if (pageIndex + 1 <= journalData.Stories.Count - 1 && journalData.Stories[pageIndex + 1] != null)
                 {
                     text2 = journalData.Stories[pageIndex + 1].Entry;
+                    titleOfPage2.GetComponent<Text>().text = journalData.Stories[pageIndex + 1].Name;
                 }
                 break;
 
