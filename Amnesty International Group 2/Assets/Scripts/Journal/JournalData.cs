@@ -14,11 +14,11 @@ public class JournalData : ScriptableObject
 
     public void AddEntry(JournalEntry entry)
     {
-        /*if (!Entries.Contains(entry))
+        if (!Entries.Contains(entry))
         {
             Entries.Add(entry);
             OrderList(Entries);
-        }*/
+        }
         switch (entry.JEType)
         {
             case JournalEntryType.STORY:

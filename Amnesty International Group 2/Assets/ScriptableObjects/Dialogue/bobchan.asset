@@ -29,6 +29,16 @@ MonoBehaviour:
     text:
     - .i.
     responses: []
-  note:
-    Name: 
-    Entry: 
+  notes:
+  - Name: A
+    Entry: AAA
+    JEType: 0
+  - Name: B
+    Entry: BBB
+    JEType: 0
+  - Name: objective
+    Entry: objective
+    JEType: 1
+  - Name: note
+    Entry: note
+    JEType: 2
