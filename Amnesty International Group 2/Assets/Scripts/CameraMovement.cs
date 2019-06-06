@@ -10,7 +10,19 @@ public class CameraMovement : MonoBehaviour
     public float maxSpeed;
 
     private Vector3 velocity;
-    
+
+    private void Start()
+    {
+        if (Target == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null && player.transform != null)
+                Target = player.transform;
+
+            Teleporter.OnTeleport.AddListener(delegate { transform.position = Target.position; }); // Snaps camera to player when teleporting
+        }
+    }
+
     private void Update()
     {
         if (Target != null)
