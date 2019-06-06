@@ -6,6 +6,6 @@ using UnityEngine;
 public class Message
 {
     public int charId;
-    public string text;
-    //public Response[] responses;
+    public string[] text;
+    public Response[] responses;
 }

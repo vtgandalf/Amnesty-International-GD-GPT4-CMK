@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e90795c0ec69f41830c039492a3a24, type: 3}
+  m_Name: JournalDataTesting
+  m_EditorClassIdentifier: 
+  Entries:
+  - Name: Story of Joseph
+    Entry: My arms fell off and I am so sad that i am unable to eat icecream anymore.
+      I am trying to learn how to use my feet instead of my hands but that is way
+      too difficult. I still struggle to wipe my ass after I take a shit.
+    JEType: 0
+  - Name: Story of My Life
+    Entry: I wanna die!
+    JEType: 0
+  - Name: Game End
+    Entry: Game end yourself!
+    JEType: 1
+  - Name: Adderss 1
+    Entry: Boshdijk 61, Eindhoven, The Netherlands
+    JEType: 2
+  - Name: Whats the beverage of choice of any cat?
+    Entry: Milk, obviously...
+    JEType: 2
+  - Name: Story of the fat lazy cat
+    Entry: My favourite thing to do is take shit in the yeard of my neighbour and
+      eat the flowers they have planted.
+    JEType: 0
