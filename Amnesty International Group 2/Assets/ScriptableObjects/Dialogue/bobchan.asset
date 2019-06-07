@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
   m_Name: bobchan
   m_EditorClassIdentifier: 
-  charactersInfo: []
+  charactersInfo:
+  - {fileID: 11400000, guid: 8d41f0ebebc952f4b89f4d5c27a60408, type: 2}
+  - {fileID: 11400000, guid: f882a7b09959f774b932cee5e37a09ad, type: 2}
   messages:
   - charId: 1
     text:

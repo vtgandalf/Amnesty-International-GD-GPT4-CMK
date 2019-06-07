@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -696,9 +696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Journal
-
-'
+  m_Text: Journal
 --- !u!222 &1733497417
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1025,6 +1023,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2f0c1e8d5f8c6094c994d0a5c983f569,
         type: 2}
+    - target: {fileID: 5213295306841972348, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306841972348, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306841972348, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306841972348, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_ChildScaleWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306841972348, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_ChildScaleHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96d35b9f13f73944a1384ba3283e8ca, type: 3}
 --- !u!1001 &8793037226294759971
@@ -1227,6 +1250,16 @@ PrefabInstance:
     - target: {fileID: 6420259064426218468, guid: df289db7f13aaf4498d2b2857d6cd48c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420259064426218468, guid: df289db7f13aaf4498d2b2857d6cd48c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420259064426218468, guid: df289db7f13aaf4498d2b2857d6cd48c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6420259064426218468, guid: df289db7f13aaf4498d2b2857d6cd48c,

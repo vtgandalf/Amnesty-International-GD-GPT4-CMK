@@ -88,11 +88,11 @@ public class DialogueBox : MonoBehaviour
         if (position < dialogue.messages.Length)
         {
             Message message = handler.LoadText(position);
-            if (dialogue.charactersInfo.Length != 0)
+            try
             {
                 NameText.text = dialogue.charactersInfo[message.charId].name;
             }
-            else
+            catch
             {
                 NameText.text = " ";
             }
