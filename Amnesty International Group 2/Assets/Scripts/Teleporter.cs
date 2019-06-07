@@ -15,7 +15,7 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && Destination != null)
         {
             playerRef = collision.transform;
             OnTeleportReady.AddListener(Teleport);
