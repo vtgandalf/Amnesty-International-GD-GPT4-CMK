@@ -13,7 +13,7 @@ public class DialogueEventCaller : ScriptableObject
     public DialogueEvent DialogueEvent = new DialogueEvent();
     public EmoteEvent EmoteEvent = new EmoteEvent();
 
-    private void Awake()
+    private void OnEnable()
     {
         Dialogging = false;
     }
