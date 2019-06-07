@@ -192,6 +192,17 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5213295305527412779, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306643557918, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f0c1e8d5f8c6094c994d0a5c983f569,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96d35b9f13f73944a1384ba3283e8ca, type: 3}
 --- !u!4 &178651401 stripped
@@ -279,9 +290,9 @@ PrefabInstance:
       objectReference: {fileID: 178651401}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74bec7f8d844d0f4c91591bff43d012b, type: 3}
---- !u!4 &1050381020 stripped
+--- !u!4 &476511978 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5362480579299450413, guid: f96d35b9f13f73944a1384ba3283e8ca,
+  m_CorrespondingSourceObject: {fileID: 5213295305527412779, guid: f96d35b9f13f73944a1384ba3283e8ca,
     type: 3}
   m_PrefabInstance: {fileID: 99839688}
   m_PrefabAsset: {fileID: 0}
@@ -590,7 +601,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1973575212}
-  - {fileID: 1050381020}
+  - {fileID: 476511978}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
