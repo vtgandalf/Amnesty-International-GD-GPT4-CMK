@@ -16,13 +16,21 @@ public class JournalBoxUI : MonoBehaviour
     public Text textOfPage2;
     public GameObject titleOfPage1;
     public GameObject titleOfPage2;
-    private Tabs currentTab = Tabs.Stories;
+    private Tabs currentTab = Tabs.Relevant;
     private int pageIndex = 0;
     public JournalData journalData;
     void Start()
     {
         journalData.UpdateLists();
-        DisplayText();
+        try
+        {
+            DisplayText();
+        }
+        catch
+        {
+            titleOfPage1.GetComponent<Text>().text = "";
+            titleOfPage2.GetComponent<Text>().text = "";
+        }
     }
 
     // Update is called once per frame
@@ -37,7 +45,15 @@ public class JournalBoxUI : MonoBehaviour
         pageIndex = 0;
         titleOfPage1.SetActive(false);
         titleOfPage2.SetActive(false);
-        DisplayText();
+        try
+        {
+            DisplayText();
+        }
+        catch
+        {
+            titleOfPage1.GetComponent<Text>().text = "";
+            titleOfPage2.GetComponent<Text>().text = "";
+        }
     }
 
     public void SetTabToQuests()
@@ -46,7 +62,15 @@ public class JournalBoxUI : MonoBehaviour
         pageIndex = 0;
         titleOfPage1.SetActive(false);
         titleOfPage2.SetActive(false);
-        DisplayText();
+        try
+        {
+            DisplayText();
+        }
+        catch
+        {
+            titleOfPage1.GetComponent<Text>().text = "";
+            titleOfPage2.GetComponent<Text>().text = "";
+        }
     }
 
     public void SetTabToStories()
@@ -55,7 +79,15 @@ public class JournalBoxUI : MonoBehaviour
         pageIndex = 0;
         titleOfPage1.SetActive(true);
         titleOfPage2.SetActive(true);
-        DisplayText();
+        try
+        {
+            DisplayText();
+        }
+        catch
+        {
+            titleOfPage1.GetComponent<Text>().text = "";
+            titleOfPage2.GetComponent<Text>().text = "";
+        }
     }
 
     public void GoToNextPage()
