@@ -3,7 +3,11 @@ guid: d23bc3e011788be499bf6ddcadf2ff4c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - InteractEC: {fileID: 11400000, guid: 863e280f552006045825306a52dbc4b4, type: 2}
+  - DialogueEC: {fileID: 11400000, guid: a975c6a5a912e3e4c96389fe22935880, type: 2}
+  - dialogue: {instanceID: 0}
+  - emoteRenderer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
