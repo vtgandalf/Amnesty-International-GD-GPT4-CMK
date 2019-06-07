@@ -25,6 +25,7 @@ public class DialogueBox : MonoBehaviour
     public DialogueEventCaller dialogEC;
     void Start()
     {
+        mainPanel.SetActive(false);
         dialogEC.DialogueEvent.AddListener(StartConversation);
     }
 
@@ -38,6 +39,7 @@ public class DialogueBox : MonoBehaviour
         mainPanel.SetActive(true);
         handler.dialogue = DiAlOgE;
         dialogue = handler.LoadDialogue();
+        position = 0;
         LoadNextMessage();
         foreach (JournalEntry x in dialogue.notes)
         {

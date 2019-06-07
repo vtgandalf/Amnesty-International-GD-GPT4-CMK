@@ -46,5 +46,6 @@ public class ScreenFader : MonoBehaviour
             blackScreen.color = color;
             yield return new WaitForSeconds(0.1f);
         }
+        Teleporter.OnTeleportDone.Invoke();
     }
 }

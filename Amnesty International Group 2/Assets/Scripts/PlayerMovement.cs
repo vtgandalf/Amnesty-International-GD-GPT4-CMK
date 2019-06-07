@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         Teleporter.OnTeleportStart.AddListener(delegate { canMove = false; });
-        Teleporter.OnTeleport.AddListener(delegate { canMove = true; });
+        Teleporter.OnTeleportDone.AddListener(delegate { canMove = true; });
     }
 
     void FixedUpdate()

@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfe08ca567e11b744a9d5a53991e0dab, type: 3}
-  m_Name: DialogueEC
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: Locked Door
   m_EditorClassIdentifier: 
-  Dialogging: 0
+  charactersInfo: []
+  messages:
+  - charId: 0
+    text:
+    - It's locked...
+    responses: []
+  notes: []

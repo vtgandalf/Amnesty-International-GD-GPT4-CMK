@@ -17,11 +17,15 @@ public class InteractableObject : MonoBehaviour
             DialogueEC.DialogueEvent.Invoke(dialogue);
             DialogueEC.DialogueEvent.AddListener(EndDialog);
             DialogueEC.EmoteEvent.AddListener(SetActiveEmote);
+            SetActiveEmote(-1);
         }
     }
 
     private void EndDialog(Dialogue newDialogue)
     {
+        if (DialogueEC.Dialogging)
+            return;
+
         dialogue = newDialogue;
         
         DialogueEC.DialogueEvent.RemoveListener(EndDialog);
