@@ -2111,11 +2111,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: Left_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2171,6 +2166,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: Left_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
@@ -2187,6 +2187,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1bb81ebade47cc46a9429f166fed92a, type: 3}
 --- !u!4 &32006141017880555 stripped
@@ -2202,11 +2207,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: Right_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2262,6 +2262,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: Right_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
@@ -2278,6 +2283,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1bb81ebade47cc46a9429f166fed92a, type: 3}
 --- !u!4 &32006140070363738 stripped
@@ -2293,11 +2303,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: End_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2353,22 +2358,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: End_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 9b0be3005f4219149af33863036d4163,
         type: 2}
-    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_Sprite
@@ -2377,6 +2377,21 @@ PrefabInstance:
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2394,11 +2409,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: Middle_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2454,6 +2464,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: Middle_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
@@ -2469,6 +2484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1bb81ebade47cc46a9429f166fed92a, type: 3}
