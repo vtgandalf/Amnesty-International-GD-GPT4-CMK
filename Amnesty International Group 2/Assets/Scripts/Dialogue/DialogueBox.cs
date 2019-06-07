@@ -78,7 +78,14 @@ public class DialogueBox : MonoBehaviour
         if (position < dialogue.messages.Length)
         {
             Message message = handler.LoadText(position);
-            NameText.text = dialogue.charactersInfo[message.charId].name;
+            if (dialogue.charactersInfo.Length != 0)
+            {
+                NameText.text = dialogue.charactersInfo[message.charId].name;
+            }
+            else
+            {
+                NameText.text = " ";
+            }
             // check if there is only one message
             if (message.text.Length > 1 && !optionChosen)
             {
