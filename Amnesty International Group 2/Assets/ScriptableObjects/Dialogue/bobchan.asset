@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: bobchan
   m_EditorClassIdentifier: 
   charactersInfo:
-  - {fileID: 11400000, guid: e5d24cfc2401ed44b9a1ffb4fa47985f, type: 2}
-  - {fileID: 11400000, guid: 73183c38b49c36343a51c228a8cb2250, type: 2}
+  - {fileID: 11400000, guid: 8d41f0ebebc952f4b89f4d5c27a60408, type: 2}
+  - {fileID: 11400000, guid: f882a7b09959f774b932cee5e37a09ad, type: 2}
   messages:
   - charId: 1
     text:
