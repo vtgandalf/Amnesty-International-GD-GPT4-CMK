@@ -9,6 +9,7 @@ public class DialogueBox : MonoBehaviour
     public Text NameText;
     public TextHandler handler;
     public GameObject optionPanel;
+    public GameObject mainPanel;
     public Button buttonPrefab;
     Dialogue dialogue;
     int position = 0;
@@ -21,8 +22,21 @@ public class DialogueBox : MonoBehaviour
     public JournalData journal;
     //private Message response;
     // Start is called before the first frame update
+    public DialogueEventCaller dialogEC;
     void Start()
     {
+        dialogEC.DialogueEvent.AddListener(StartConversation);
+    }
+
+    public void StartConversation(Dialogue DiAlOgE)
+    {
+        if(dialogEC.Dialogging)
+        {
+            return;
+        }
+        dialogEC.Dialogging=true;
+        mainPanel.SetActive(true);
+        handler.dialogue = DiAlOgE;
         dialogue = handler.LoadDialogue();
         LoadNextMessage();
         foreach (JournalEntry x in dialogue.notes)
@@ -45,12 +59,6 @@ public class DialogueBox : MonoBehaviour
                     break;
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
     public void ChooseAnOption(int x)
     {
@@ -78,7 +86,14 @@ public class DialogueBox : MonoBehaviour
         if (position < dialogue.messages.Length)
         {
             Message message = handler.LoadText(position);
-            NameText.text = dialogue.charactersInfo[message.charId].name;
+            if (dialogue.charactersInfo.Length != 0)
+            {
+                NameText.text = dialogue.charactersInfo[message.charId].name;
+            }
+            else
+            {
+                NameText.text = " ";
+            }
             // check if there is only one message
             if (message.text.Length > 1 && !optionChosen)
             {
@@ -119,6 +134,7 @@ public class DialogueBox : MonoBehaviour
         {
             AddAditionalInformationToJournal();
             ChooseAStoryToAddToJournal();
+            mainPanel.SetActive(false);
         }
     }
 
