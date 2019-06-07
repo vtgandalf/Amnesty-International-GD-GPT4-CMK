@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: DialogWithDadScene1
+  m_EditorClassIdentifier: 
+  charactersInfo:
+  - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
+  - {fileID: 11400000, guid: 8b942ae9c37040148a2fd7c40ecbb7be, type: 2}
+  messages:
+  - charId: 1
+    text:
+    - "Are you Mister\u2026 Jaap?"
+    responses: []
+  - charId: 0
+    text:
+    - That is correct. And you sir?
+    responses: []
+  - charId: 0
+    text:
+    - "Please, you must help me and my family\u2026"
+    responses: []
+  - charId: 0
+    text:
+    - Calm down Mahmood, take a seat.
+    responses: []
+  - charId: 0
+    text:
+    - Are you Syrian, Mahmood?
+    responses: []
+  - charId: 1
+    text:
+    - "Yes, I\u2019ve lived in Damascus all my life. It was a beautiful city, and
+      the war destroyed it all."
+    responses: []
+  - charId: 1
+    text:
+    - I fled to Jordan with my wife Nadya and my son Ibrahim.
+    responses: []
+  - charId: 1
+    text:
+    - But living conditions were poor, there is no future there.
+    responses: []
+  - charId: 0
+    text:
+    - And you made the trip to Europe with your family?
+    responses: []
+  - charId: 1
+    text:
+    - That trip is far too dangerous. I travelled with families with many children,
+      and they suffered.
+    responses: []
+  - charId: 1
+    text:
+    - "I couldn\u2019t allow my family to go through that. I hoped to have them relocate
+      to me once I settled here."
+    responses: []
+  - charId: 0
+    text:
+    - But a woman alone with a child, is that safe?
+    responses: []
+  - charId: 1
+    text:
+    - 
+    responses: []
+  - charId: 0
+    text:
+    - So you have his address at least
+    responses: []
+  notes:
+  - Name: Address Of the Brother
+    Entry: Jordan, Some Address
+    JEType: 2

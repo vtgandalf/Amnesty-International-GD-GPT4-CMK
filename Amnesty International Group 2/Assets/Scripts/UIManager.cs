@@ -13,11 +13,13 @@ public class UIManager : MonoBehaviour
     {
         journalBox.SetActive(true);
         journalButton.SetActive(false);
+        menuButton.SetActive(false);
     }
 
     public void CloseJournal()
     {
         journalBox.SetActive(false);
         journalButton.SetActive(true);
+        menuButton.SetActive(true);
     }
 }
