@@ -337,78 +337,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5749020480330629838, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: journalData
-      value: 
-      objectReference: {fileID: 11400000, guid: da2a15aba54b0f046b51d25aa058fbfa,
-        type: 2}
-    - target: {fileID: 5749020480866858069, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: journal
-      value: 
-      objectReference: {fileID: 11400000, guid: da2a15aba54b0f046b51d25aa058fbfa,
-        type: 2}
-    - target: {fileID: 5749020480069575386, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020480069575386, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020480069575386, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020480069575386, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020480069575386, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020480069575386, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020479548543666, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020479548543666, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020479548543666, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020479548543666, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020479548543666, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749020479548543666, guid: 8cc5efec728042c438ee4ea56a81d2d7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cc5efec728042c438ee4ea56a81d2d7, type: 3}
 --- !u!1 &1379363488
@@ -733,6 +661,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4334852958272293396, guid: 11c8e5fbb87a38347be8628dcd8d0a87,
+        type: 3}
+      propertyPath: touchUI
+      value: 
+      objectReference: {fileID: 1922622867}
+    - target: {fileID: 4334852958272293396, guid: 11c8e5fbb87a38347be8628dcd8d0a87,
+        type: 3}
+      propertyPath: touchControls
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c8e5fbb87a38347be8628dcd8d0a87, type: 3}
 --- !u!224 &1877745556 stripped
@@ -741,6 +679,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1146917697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1922622867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7361289963776365616, guid: 8cc5efec728042c438ee4ea56a81d2d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1146917697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb62615568363d4bb4c4cc48040581a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2034599012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4334852958272293401, guid: 11c8e5fbb87a38347be8628dcd8d0a87,
@@ -818,7 +768,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: b8e2158e5a76e914f9ad4dd97318bd85,
+      objectReference: {fileID: 11400000, guid: 8b6149aa0108a6b44bd43db98002d3f3,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74bec7f8d844d0f4c91591bff43d012b, type: 3}

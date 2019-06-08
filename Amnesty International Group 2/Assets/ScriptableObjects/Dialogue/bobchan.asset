@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: bobchan
   m_EditorClassIdentifier: 
   charactersInfo:
-  - {fileID: 11400000, guid: 8d41f0ebebc952f4b89f4d5c27a60408, type: 2}
-  - {fileID: 11400000, guid: f882a7b09959f774b932cee5e37a09ad, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   messages:
   - charId: 1
     text:
     - owo
-    - uwu
     responses: []
   - charId: 0
     text:
@@ -33,12 +32,16 @@ MonoBehaviour:
   - Name: A
     Entry: AAA
     JEType: 0
+    Weight: 3
   - Name: B
     Entry: BBB
     JEType: 0
+    Weight: 1
   - Name: objective
     Entry: objective
     JEType: 1
+    Weight: 0
   - Name: note
     Entry: note
     JEType: 2
+    Weight: 0

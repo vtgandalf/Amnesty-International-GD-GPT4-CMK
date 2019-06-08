@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe08ca567e11b744a9d5a53991e0dab, type: 3}
   m_Name: DialogueEC
   m_EditorClassIdentifier: 
+  Dialogging: 0

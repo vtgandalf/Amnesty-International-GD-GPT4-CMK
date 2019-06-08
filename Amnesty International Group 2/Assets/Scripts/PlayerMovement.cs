@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public float sprintMultiplier = 1.5f;
     private bool canMove = true;
 
+    public bool touchControls = false;
     private Rigidbody2D rb2d;
+    public UIControls touchUI;
 
     [SerializeField] private InteractEventCaller InteractEC;
    
@@ -36,8 +38,18 @@ public class PlayerMovement : MonoBehaviour
         if (!canMove)
             return;
 
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
+        float moveHorizontal = 0f;
+        float moveVertical = 0f;
+        if (touchControls)
+        {
+            moveHorizontal = touchUI.Horizontal;
+            moveVertical = touchUI.Vertical;
+        }
+        else
+        {
+            moveHorizontal = Input.GetAxisRaw("Horizontal");
+            moveVertical = Input.GetAxisRaw("Vertical");
+        }
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         if (Input.GetKey(KeyCode.LeftShift))

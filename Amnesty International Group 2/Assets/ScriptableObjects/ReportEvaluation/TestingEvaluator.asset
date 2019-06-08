@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e90795c0ec69f41830c039492a3a24, type: 3}
-  m_Name: JournalData
+  m_Script: {fileID: 11500000, guid: dd27e617344de9b42b21cd1faf9338f8, type: 3}
+  m_Name: TestingEvaluator
   m_EditorClassIdentifier: 
-  Entries: []
+  stories: []

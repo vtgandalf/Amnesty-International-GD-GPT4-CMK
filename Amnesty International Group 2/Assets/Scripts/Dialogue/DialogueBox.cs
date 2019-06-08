@@ -18,6 +18,8 @@ public class DialogueBox : MonoBehaviour
     //private int storyChosenId;
     private bool hasAStory = false;
     private bool hasInfo = false;
+    public ReportEvaluation evaluator;
+    public GameObject touchControlsUI;
 
     public JournalData journal;
     //private Message response;
@@ -35,6 +37,7 @@ public class DialogueBox : MonoBehaviour
         {
             return;
         }
+        touchControlsUI.SetActive(false);
         dialogEC.Dialogging=true;
         mainPanel.SetActive(true);
         handler.dialogue = DiAlOgE;
@@ -77,9 +80,19 @@ public class DialogueBox : MonoBehaviour
 
     public void ChooseAStory(JournalEntry x)
     {
+        for (int i = 0; i < optionPanel.transform.childCount; i++)
+        {
+            var child = optionPanel.transform.GetChild(i).gameObject;
+            if (child != null)
+                child.SetActive(false);
+        }
         journal.AddEntry(x);
+        evaluator.AddStory(x);
+        position = 0;
+        dialogEC.Dialogging = false;
         optionPanel.SetActive(false);
-        this.gameObject.SetActive(false);
+        mainPanel.SetActive(false);
+        touchControlsUI.SetActive(true);
     }
 
     public void LoadNextMessage()
@@ -135,32 +148,49 @@ public class DialogueBox : MonoBehaviour
         {
             AddAditionalInformationToJournal();
             ChooseAStoryToAddToJournal();
-            mainPanel.SetActive(false);
         }
     }
 
     private void ChooseAStoryToAddToJournal()
     {
         NameText.text = "Choose what to write down!";
+        bool trig = false;
         foreach (JournalEntry x in dialogue.notes)
         {
             if (x.JEType == JournalEntryType.STORY)
             {
-                if (!optionPanel.activeSelf)
-                {
-                    optionPanel.SetActive(true);
-                }
-                // create a button
-                Button button = Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
-                // set its text
-                var btnText = button.GetComponentInChildren<Text>();
-                btnText.text = x.Name;
-                //button.text = message.text[i];
-                // set its function
-                button.onClick.AddListener(() => { ChooseAStory(x); });
-                // set the parent to be the optionPanel
-                button.transform.SetParent(optionPanel.transform);
+                trig = true;
             }
+        }
+        if(trig == true)
+        {
+            foreach (JournalEntry x in dialogue.notes)
+            {
+                if (x.JEType == JournalEntryType.STORY)
+                {
+                    if (!optionPanel.activeSelf)
+                    {
+                        optionPanel.SetActive(true);
+                    }
+                    // create a button
+                    Button button = Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
+                    // set its text
+                    var btnText = button.GetComponentInChildren<Text>();
+                    btnText.text = x.Name;
+                    //button.text = message.text[i];
+                    // set its function
+                    button.onClick.AddListener(() => { ChooseAStory(x); });
+                    // set the parent to be the optionPanel
+                    button.transform.SetParent(optionPanel.transform);
+                }
+            }
+        }
+        else
+        {
+            position = 0;
+            dialogEC.Dialogging = false;
+            mainPanel.SetActive(false);
+            touchControlsUI.SetActive(true);
         }
     }
 
