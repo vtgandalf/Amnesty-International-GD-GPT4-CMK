@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88e90795c0ec69f41830c039492a3a24, type: 3}
   m_Name: JournalData
   m_EditorClassIdentifier: 
-  Entries: []
+  Entries:
+  - Name: Address Of the Brother
+    Entry: Jordan, Some Address
+    JEType: 2
