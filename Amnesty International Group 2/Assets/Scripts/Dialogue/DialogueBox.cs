@@ -37,6 +37,7 @@ public class DialogueBox : MonoBehaviour
         {
             return;
         }
+        touchControlsUI.transform.GetChild(1).GetComponent<UIControls>().UpdateAction(false);
         touchControlsUI.SetActive(false);
         dialogEC.Dialogging=true;
         mainPanel.SetActive(true);
