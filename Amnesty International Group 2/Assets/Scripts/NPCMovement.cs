@@ -16,6 +16,7 @@ public class NPCMovement : MonoBehaviour
     private bool prevRight = false;
     private bool canMove = true;
     private Rigidbody2D rb2d;
+    private bool targetHasBeenReached = false;
 
     void Start()
     {
@@ -35,6 +36,19 @@ public class NPCMovement : MonoBehaviour
     {
         float moveHorizontal = 0f;
         float moveVertical = 0f;
+        if(Horizontal+Vertical>1)
+        {
+            Horizontal = 0.5f;
+            Vertical = 0.5f;
+        }
+        if (Horizontal == 0 && Vertical == 0)
+        {
+            targetHasBeenReached = true;
+        }
+        else
+        {
+            targetHasBeenReached = false;
+        }
         moveHorizontal = Horizontal;
         moveVertical = Vertical;
         PlayAnimationsWalking(moveHorizontal, moveVertical);
@@ -48,10 +62,10 @@ public class NPCMovement : MonoBehaviour
         bool down = false;
         bool left = false;
         bool right = false;
-        if(x<0) x = -1f;
-        if(y<0) y = -1f;
-        if(x>0) x = 1f;
-        if(y>0) y = 1f;
+        if (x < 0) x = -1f;
+        if (y < 0) y = -1f;
+        if (x > 0) x = 1f;
+        if (y > 0) y = 1f;
         switch (x)
         {
             case -1:
@@ -148,7 +162,11 @@ public class NPCMovement : MonoBehaviour
 
     public void UpdateHorizontal(float value)
     {
-        if(value > 1)
+        if (value < 1 && value > -1)
+        {
+            value = 0;
+        }
+        if (value > 1)
         {
             value = 1;
         }
@@ -161,7 +179,11 @@ public class NPCMovement : MonoBehaviour
 
     public void UpdateVertical(float value)
     {
-        if(value > 1)
+        if (value < 0.1 && value > -0.1)
+        {
+            value = 0;
+        }
+        if (value > 1)
         {
             value = 1;
         }
@@ -171,4 +193,6 @@ public class NPCMovement : MonoBehaviour
         }
         Vertical = value;
     }
+
+    public bool TargetHasBeenReached { get { return this.targetHasBeenReached; } }
 }
