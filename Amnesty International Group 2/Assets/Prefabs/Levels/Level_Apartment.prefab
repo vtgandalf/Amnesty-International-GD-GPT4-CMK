@@ -1614,6 +1614,7 @@ TilemapCollider2D:
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!50 &5082034442193396516
 Rigidbody2D:
   serializedVersion: 4
@@ -1766,6 +1767,7 @@ CompositeCollider2D:
       - {x: 8, y: -5}
       - {x: 8, y: -6}
   m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.000005
 --- !u!1 &5082034443031790131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,11 +2113,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: Left_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2171,12 +2168,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: Left_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 9b0be3005f4219149af33863036d4163,
         type: 2}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -142
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_Sprite
@@ -2202,11 +2209,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: Right_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2262,12 +2264,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: Right_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 9b0be3005f4219149af33863036d4163,
         type: 2}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -142
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_Sprite
@@ -2293,11 +2305,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: End_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2353,21 +2360,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: End_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 9b0be3005f4219149af33863036d4163,
         type: 2}
-    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
-      propertyPath: m_Offset.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
+      propertyPath: m_SortingOrder
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
@@ -2377,6 +2384,16 @@ PrefabInstance:
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2394,11 +2411,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5082034441242907895}
     m_Modifications:
-    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_Name
-      value: Middle_Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028721, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2454,12 +2466,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028717, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_Name
+      value: Middle_Door
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028716, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 9b0be3005f4219149af33863036d4163,
         type: 2}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -142
+      objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
       propertyPath: m_Sprite

@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            InteractEC.InteractEvent.Invoke();
+            InteractEC.InteractEvent.Invoke(transform.position);
         }
     }
 
@@ -45,22 +45,4 @@ public class PlayerMovement : MonoBehaviour
 
         rb2d.velocity = movement * speed * Time.fixedDeltaTime;
     }
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    Debug.Log("enter");
-    //    if (other.CompareTag("Interactable"))
-    //    {
-    //        objectInRangeScript = other.GetComponent<InteractableObject>();
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.gameObject == objectInRangeScript.gameObject)
-    //    {
-    //        Debug.Log("exit");
-    //        objectInRangeScript = null;
-    //    }
-    //}
 }

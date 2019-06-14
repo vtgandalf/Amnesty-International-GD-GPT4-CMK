@@ -10,10 +10,11 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private SpriteRenderer emoteRenderer;
     [SerializeField] private Sprite[] emotes;
 
-    public void Interact()
+    public void Interact(Vector3 playerPos)
     {
         if (dialogue)
         {
+            RotateToPlayer(playerPos); // Function not finished
             DialogueEC.DialogueEvent.Invoke(dialogue);
             DialogueEC.DialogueEvent.AddListener(EndDialog);
             DialogueEC.EmoteEvent.AddListener(SetActiveEmote);
@@ -49,7 +50,17 @@ public class InteractableObject : MonoBehaviour
             emoteRenderer.sprite = emotes[emoteIndex];
         }
     }
-    
+
+    private void RotateToPlayer(Vector3 playerPos)
+    {
+        Vector3 direction = playerPos - transform.position;
+        /* // Still need a way to rotate npc
+        if (Mathf.Abs(direction.x) >= Mathf.Abs(direction.y))
+            direction.x >= 0 ? LookRight : LookLeft
+        else direction.y >= 0 ? LookUp : LookDown
+        */
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
