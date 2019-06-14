@@ -26,6 +26,7 @@ public class DialogueBox : MonoBehaviour
     //private Message response;
     // Start is called before the first frame update
     public DialogueEventCaller dialogEC;
+    public SceneEventHandler SceneEventHandler;
     void Start()
     {
         mainPanel.SetActive(false);
@@ -34,13 +35,13 @@ public class DialogueBox : MonoBehaviour
 
     public void StartConversation(Dialogue DiAlOgE)
     {
-        if(dialogEC.Dialogging)
+        if (dialogEC.Dialogging)
         {
             return;
         }
         touchControlsUI.transform.GetChild(1).GetComponent<UIControls>().UpdateAction(false);
         touchControlsUI.SetActive(false);
-        dialogEC.Dialogging=true;
+        dialogEC.Dialogging = true;
         mainPanel.SetActive(true);
         handler.dialogue = DiAlOgE;
         dialogue = handler.LoadDialogue();
@@ -91,12 +92,7 @@ public class DialogueBox : MonoBehaviour
         }
         journal.AddEntry(x);
         evaluator.AddStory(x);
-        position = 0;
-        dialogEC.Dialogging = false;
-        dialogEC.SceneEvent.Invoke(true);
-        optionPanel.SetActive(false);
-        mainPanel.SetActive(false);
-        touchControlsUI.SetActive(true);
+        EndOfConversation();
     }
 
     public void LoadNextMessage()
@@ -166,7 +162,7 @@ public class DialogueBox : MonoBehaviour
                 trig = true;
             }
         }
-        if(trig == true)
+        if (trig == true)
         {
             foreach (JournalEntry x in dialogue.notes)
             {
@@ -191,11 +187,7 @@ public class DialogueBox : MonoBehaviour
         }
         else
         {
-            position = 0;
-            dialogEC.Dialogging = false;
-            dialogEC.SceneEvent.Invoke(true);
-            mainPanel.SetActive(false);
-            touchControlsUI.SetActive(true);
+            EndOfConversation();
         }
     }
 
@@ -219,6 +211,32 @@ public class DialogueBox : MonoBehaviour
                         break;
                 }
             }
+        }
+    }
+
+    private void EndOfConversation()
+    {
+        position = 0;
+        dialogEC.Dialogging = false;
+        optionPanel.SetActive(false);
+        mainPanel.SetActive(false);
+        touchControlsUI.SetActive(true);
+        TakeAnActionBasedOnDialog();
+    }
+
+    private void TakeAnActionBasedOnDialog()
+    {
+        if(dialogue.title == "ConversationWithFather")
+        {
+            SceneEventHandler.ConversationWithFatherEvent.Invoke(true);
+        }
+        if(dialogue.title == "Door")
+        {
+            SceneEventHandler.Scene2DoorKnock.Invoke(true);
+        }
+        if(dialogue.title == "Neighbour1")
+        {
+            SceneEventHandler.ConversationWithNeighbour1Event.Invoke(true);
         }
     }
 }

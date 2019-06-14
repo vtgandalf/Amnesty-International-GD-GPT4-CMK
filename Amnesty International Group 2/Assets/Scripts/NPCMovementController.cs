@@ -11,17 +11,15 @@ public class NPCMovementController : MonoBehaviour
 
     private List<GameObject> markers = new List<GameObject>();
     private List<GameObject> markers2 = new List<GameObject>();
-    int position = 0;
+    public int position = 0;
     bool previousTargetReached = false;
     public bool targetReached = false;
     public bool eventHappened = false;
-    [SerializeField] private DialogueEventCaller DialogueEC;
 
     // Start is called before the first frame update
     //[SerializeField] private InteractEventCaller InteractEC;
     void Start()
     {
-        DialogueEC.SceneEvent.AddListener(SceneEventAction);
         movement = gameObject.GetComponent<NPCMovement>();
         UpdateMarkers();
     }
@@ -105,13 +103,5 @@ public class NPCMovementController : MonoBehaviour
             movement.UpdateHorizontal(x);
             movement.UpdateVertical(y);
         }
-    }
-
-    private void SceneEventAction(bool x)
-    {
-        position = 0;
-        eventHappened = true;
-        targetReached = false;
-        Object.Destroy(this.gameObject, 1f);
     }
 }

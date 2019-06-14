@@ -13,6 +13,10 @@ public class Teleporter : MonoBehaviour
 
     public Transform Destination;
     private Transform playerRef;
+    public SceneEventHandler SceneEventHandler;
+    public bool outOfScene1 = false;
+    public bool outOfScene2 = false;
+    public bool outOfScene3 = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,6 +37,14 @@ public class Teleporter : MonoBehaviour
             playerRef.transform.position = Destination.position;
             OnTeleport.Invoke();
             playerRef = null;
+            if(outOfScene1)
+            {
+                SceneEventHandler.Scene1Event.Invoke(true);
+            }
+            if(outOfScene2)
+            {
+                SceneEventHandler.Scene2Event.Invoke(true);
+            }
         }
     }
 }

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -232,6 +232,7 @@ MonoBehaviour:
   touchControlsUI: {fileID: 0}
   journal: {fileID: 11400000, guid: da2a15aba54b0f046b51d25aa058fbfa, type: 2}
   dialogEC: {fileID: 11400000, guid: a975c6a5a912e3e4c96389fe22935880, type: 2}
+  SceneEventHandler: {fileID: 11400000, guid: 4bb693b90ef6d8b4abd1e38ebb9504ae, type: 2}
 --- !u!1 &5213295306841972338
 GameObject:
   m_ObjectHideFlags: 0

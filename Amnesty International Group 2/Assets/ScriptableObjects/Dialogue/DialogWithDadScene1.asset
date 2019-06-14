@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
   m_Name: DialogWithDadScene1
   m_EditorClassIdentifier: 
+  title: ConversationWithFather
   charactersInfo:
   - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
   - {fileID: 11400000, guid: 8b942ae9c37040148a2fd7c40ecbb7be, type: 2}
@@ -30,7 +31,7 @@ MonoBehaviour:
     responses: []
   - charId: 0
     text:
-    - Calm down Mahmood, take a seat.
+    - Calm down Mahmood.
     responses: []
   - charId: 0
     text:
