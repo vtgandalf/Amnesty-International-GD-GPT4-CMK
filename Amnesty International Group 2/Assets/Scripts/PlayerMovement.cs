@@ -36,14 +36,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (touchUI.Action)
             {
-                InteractEC.InteractEvent.Invoke();
+                InteractEC.InteractEvent.Invoke(this.gameObject.transform.position);
             }
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                InteractEC.InteractEvent.Invoke();
+                //InteractEC.InteractEvent.Invoke();
             }
         }
     }
