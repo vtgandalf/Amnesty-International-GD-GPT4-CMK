@@ -9,6 +9,7 @@ public class Teleporter : MonoBehaviour
     public static UnityEvent OnTeleportStart = new UnityEvent();
     public static UnityEvent OnTeleportReady = new UnityEvent();
     public static UnityEvent OnTeleport = new UnityEvent();
+    public static UnityEvent OnTeleportDone = new UnityEvent();
 
     public Transform Destination;
     private Transform playerRef;

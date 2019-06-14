@@ -15,15 +15,28 @@ public class IsometricObject : MonoBehaviour
     [Tooltip("Does this object move?")]
     public bool Dynamic = false;
 
+    private void OnValidate()
+    {
+        if (rend == null)
+            rend = GetComponent<Renderer>();
+        UpdateSortingOrder();
+    }
+
     private void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.sortingOrder = -(int)(transform.position.y * isometricRangePerYUnit) + YOffset;
+        if (rend == null)
+            rend = GetComponent<Renderer>();
+        UpdateSortingOrder();
     }
     
     private void Update()
     {
         if (Dynamic)
-            rend.sortingOrder = -(int)(transform.position.y * isometricRangePerYUnit) + YOffset;
+            UpdateSortingOrder();
+    }
+
+    private void UpdateSortingOrder()
+    {
+        rend.sortingOrder = -(int)(transform.position.y * isometricRangePerYUnit) + YOffset;
     }
 }

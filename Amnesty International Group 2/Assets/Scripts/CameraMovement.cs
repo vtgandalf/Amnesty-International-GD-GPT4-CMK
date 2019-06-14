@@ -17,10 +17,13 @@ public class CameraMovement : MonoBehaviour
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null && player.transform != null)
+            {
                 Target = player.transform;
-
-            Teleporter.OnTeleport.AddListener(delegate { transform.position = Target.position; }); // Snaps camera to player when teleporting
+                transform.position = Target.position;
+                Teleporter.OnTeleport.AddListener(delegate { transform.position = Target.position; }); // Snaps camera to player when teleporting
+            }
         }
+        else transform.position = Target.position;
     }
 
     private void Update()

@@ -43,6 +43,7 @@ public class DialogueBox : MonoBehaviour
         mainPanel.SetActive(true);
         handler.dialogue = DiAlOgE;
         dialogue = handler.LoadDialogue();
+        position = 0;
         LoadNextMessage();
         foreach (JournalEntry x in dialogue.notes)
         {
