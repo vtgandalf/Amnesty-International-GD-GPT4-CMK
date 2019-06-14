@@ -1614,6 +1614,7 @@ TilemapCollider2D:
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!50 &5082034442193396516
 Rigidbody2D:
   serializedVersion: 4
@@ -1766,6 +1767,7 @@ CompositeCollider2D:
       - {x: 8, y: -5}
       - {x: 8, y: -6}
   m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.000005
 --- !u!1 &5082034443031790131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2181,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
+      propertyPath: m_SortingOrder
+      value: -142
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
@@ -2186,11 +2193,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1bb81ebade47cc46a9429f166fed92a, type: 3}
@@ -2275,6 +2277,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
+      propertyPath: m_SortingOrder
+      value: -142
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
@@ -2282,11 +2289,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1bb81ebade47cc46a9429f166fed92a, type: 3}
@@ -2371,6 +2373,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
+      propertyPath: m_SortingOrder
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
@@ -2378,11 +2385,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 5113474591504028723, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
@@ -2477,6 +2479,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
         type: 3}
+      propertyPath: m_SortingOrder
+      value: -142
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
+        type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
@@ -2484,11 +2491,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113474591504028722, guid: e1bb81ebade47cc46a9429f166fed92a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1bb81ebade47cc46a9429f166fed92a, type: 3}
