@@ -800,6 +800,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a975c6a5a912e3e4c96389fe22935880,
         type: 2}
+    - target: {fileID: 3673047599216308051, guid: 34fc778823cb3a8418a1d659bc841a86,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673047599216308051, guid: 34fc778823cb3a8418a1d659bc841a86,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6773032101200953293, guid: 34fc778823cb3a8418a1d659bc841a86,
         type: 3}
       propertyPath: dialogue
