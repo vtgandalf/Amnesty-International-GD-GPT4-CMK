@@ -36,6 +36,11 @@ public class JournalBoxUI : MonoBehaviour
         RefreshPages();
     }
 
+    void OnEnable()
+    {
+        RefreshPages();
+    }
+
     // Update is called once per frame
     void Update()
     {

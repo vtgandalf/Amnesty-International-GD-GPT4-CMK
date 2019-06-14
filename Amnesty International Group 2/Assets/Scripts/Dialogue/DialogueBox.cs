@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DialogueBox : MonoBehaviour
 {
@@ -92,6 +93,7 @@ public class DialogueBox : MonoBehaviour
         evaluator.AddStory(x);
         position = 0;
         dialogEC.Dialogging = false;
+        dialogEC.SceneEvent.Invoke(true);
         optionPanel.SetActive(false);
         mainPanel.SetActive(false);
         touchControlsUI.SetActive(true);
@@ -191,6 +193,7 @@ public class DialogueBox : MonoBehaviour
         {
             position = 0;
             dialogEC.Dialogging = false;
+            dialogEC.SceneEvent.Invoke(true);
             mainPanel.SetActive(false);
             touchControlsUI.SetActive(true);
         }

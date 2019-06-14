@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     private bool prevDown = false;
     private bool prevLeft = false;
     private bool prevRight = false;
-
     [SerializeField] private InteractEventCaller InteractEC;
 
     void Start()
@@ -43,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //InteractEC.InteractEvent.Invoke();
+                InteractEC.InteractEvent.Invoke(this.gameObject.transform.position);
             }
         }
     }

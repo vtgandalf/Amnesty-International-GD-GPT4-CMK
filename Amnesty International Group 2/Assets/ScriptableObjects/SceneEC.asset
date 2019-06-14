@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e90795c0ec69f41830c039492a3a24, type: 3}
-  m_Name: JournalData
+  m_Script: {fileID: 11500000, guid: a71bc92a2e146014f8f4f418964e2556, type: 3}
+  m_Name: SceneEC
   m_EditorClassIdentifier: 
-  Entries:
-  - Name: Address Of the Brother
-    Entry: Jordan, Some Address
-    JEType: 2
-    Weight: 0

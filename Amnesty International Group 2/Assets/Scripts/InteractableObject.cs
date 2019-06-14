@@ -9,7 +9,6 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private SpriteRenderer emoteRenderer;
     [SerializeField] private Sprite[] emotes;
-
     public void Interact(Vector3 playerPos)
     {
         if (dialogue)
@@ -27,11 +26,11 @@ public class InteractableObject : MonoBehaviour
         if (DialogueEC.Dialogging)
             return;
 
+        Debug.Log("Dialogue has Ended!");
         dialogue = newDialogue;
-        
+
         DialogueEC.DialogueEvent.RemoveListener(EndDialog);
         DialogueEC.EmoteEvent.RemoveListener(SetActiveEmote);
-
         SetActiveEmote(0);
     }
 
@@ -44,7 +43,8 @@ public class InteractableObject : MonoBehaviour
         {
             emoteRenderer.enabled = false;
             emoteRenderer.sprite = null;
-        } else
+        }
+        else
         {
             emoteRenderer.enabled = true;
             emoteRenderer.sprite = emotes[emoteIndex];

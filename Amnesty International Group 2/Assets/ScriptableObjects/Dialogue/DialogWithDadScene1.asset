@@ -75,6 +75,10 @@ MonoBehaviour:
     text:
     - So you have his address at least
     responses: []
+  - charId: 0
+    text:
+    - '*I should better get going*'
+    responses: []
   notes:
   - Name: Address Of the Brother
     Entry: Jordan, Some Address

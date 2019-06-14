@@ -1525,6 +1525,36 @@ PrefabInstance:
       propertyPath: touchControlsUI
       value: 
       objectReference: {fileID: 165044191750972193}
+    - target: {fileID: 5213295305493785229, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295305493785229, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295305493785229, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306524333016, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306524333016, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213295306524333016, guid: f96d35b9f13f73944a1384ba3283e8ca,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96d35b9f13f73944a1384ba3283e8ca, type: 3}
 --- !u!1 &5749020480866858070 stripped
