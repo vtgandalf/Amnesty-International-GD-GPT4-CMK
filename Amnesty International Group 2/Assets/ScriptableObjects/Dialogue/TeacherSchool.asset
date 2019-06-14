@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: TeacherSchool
+  m_EditorClassIdentifier: 
+  charactersInfo:
+  - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
+  - {fileID: 0}
+  messages:
+  - charId: 1
+    text:
+    - Can I help you sir?
+    responses: []
+  - charId: 0
+    text:
+    - Indeed yes ,I am a reporter trying to find this little boy,his father is looking
+      for him and his mother.Do you know him?(showing picture of the son)
+    responses: []
+  - charId: 1
+    text:
+    - You know where his father is?(teacher responded               surprised )".Take
+      a sit please ,I will tell you               whatever I know.He doesn't really
+      talks a lot.Barely have money for food,thats why a give him sometimes some coins.He
+      lives very far away and his lonely mother is very poor and cant afford a ticket
+      for him.
+    responses: []
+  - charId: 0
+    text:
+    - Do you have the adress of his home?
+    responses: []
+  - charId: 1
+    text:
+    - Of course!In this logbook here we have all the adresses of our children.I will
+      find it for you in a minute"(teacher finds and tells the adress to me).
+    responses: []
+  - charId: 0
+    text:
+    - I really appreciate your help madam.I am heading to his home right away.
+    responses: []
+  - charId: 1
+    text:
+    - I am glad to help more if needed.Good luck!
+    responses: []
+  notes:
+  - Name: Go to boy's adress
+    Entry: After speaking with his teacher I found out the adress of the family
+    JEType: 2
+    Weight: 0
+  - Name: In school
+    Entry: The teacher shared that sometimes even she gave him money for food, because
+      she could not bear to look at him like that.
+    JEType: 0
+    Weight: 3
+  - Name: In school
+    Entry: I found out the boy was antisocial and very poor.Walks for hours to school
+      because he cannot afford a ticket.
+    JEType: 0
+    Weight: 2

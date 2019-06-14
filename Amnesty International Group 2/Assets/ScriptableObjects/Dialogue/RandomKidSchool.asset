@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: RandomKidSchool
+  m_EditorClassIdentifier: 
+  charactersInfo:
+  - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
+  - {fileID: 0}
+  messages:
+  - charId: 0
+    text:
+    - Dont be scared,do I look scary?You probably know this kid?(showing the picture)
+    responses: []
+  - charId: 1
+    text:
+    - Hmm,he used to be one of my friends(kid answers with timed voice)
+    responses: []
+  - charId: 0
+    text:
+    - Why not anymore ,what happened,where is he now?
+    responses: []
+  - charId: 1
+    text:
+    - 'He started to behave really antisocial and stoped talking to other kids as
+      well me..you can find his teacher in this room(points the room) '
+    responses: []
+  - charId: 0
+    text:
+    - Thanks you little boy,take this small present from me,share it with your frineds(giving
+      him sweets)
+    responses: []
+  - charId: 1
+    text:
+    - Thank you(the kid grabs the sweets and runs away)
+    responses: []
+  notes: []

@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: Neighbour
+  m_EditorClassIdentifier: 
+  charactersInfo:
+  - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
+  - {fileID: 0}
+  messages:
+  - charId: 1
+    text:
+    - Who is it ?
+    responses: []
+  - charId: 0
+    text:
+    - Hello,I am currently searching for a woman named Nadya. I was told she lived
+      here.
+    responses: []
+  - charId: 1
+    text:
+    - ' Why ? What is she to you ?'
+    responses: []
+  - charId: 0
+    text:
+    - I need to find her and her son so i can reunite them with the father , i am
+      working for a company that helps refugees in need.
+    responses: []
+  - charId: 1
+    text:
+    - I see, i will be glad to help you, do you want a cup of coffee?
+    responses: []
+  - charId: 0
+    text:
+    - ' No thank you, but what can you tell me about her?'
+    responses: []
+  - charId: 1
+    text:
+    - She moved away, didn't have enough money to pay rent or to buy enough food.
+      Do you know her husband?
+    responses: []
+  - charId: 0
+    text:
+    - This is sad to hear. I know him yes, he is the reason i am here, he came up
+      to me in my office and asked for my help to find them and here i am now.
+    responses: []
+  - charId: 1
+    text:
+    - This is really noble of you, it is a great responsibility to try to get the
+      family back together.  Another thing i can tell you is that she used to cook
+      for me in exchange for small payments but she really loves her son and she wants
+      better education and future for him and she was really sad that she could not
+      provide it for him or even a small present.
+    responses: []
+  - charId: 0
+    text:
+    - I am sorry to hear that. But it is my job to find them and bring them to Europe,
+      there we will secure a future for her son.
+    responses: []
+  - charId: 1
+    text:
+    - I can give you the address of the school of her son. It is highstreet 93. Maybe
+      you can go there and ask for more in depth information about her son's life
+      at the school and if he is having problems.
+    responses: []
+  - charId: 0
+    text:
+    - Thank you, you have been kind to me and have shown understanding for my cause
+      , i won't forget it. Goodbye.
+    responses: []
+  - charId: 1
+    text:
+    - Take care and good luck.
+    responses: []
+  notes:
+  - Name: I should go and speak with one of the teachers.
+    Entry: I spoke with the woman in the house where Nadya used to live. She gave
+      me the address of the school of the son.
+    JEType: 2
+    Weight: 0
+  - Name: Neighbour meet
+    Entry: The mother could not pay rent even though she earned some money by cooking
+      for her neighbour and she had to move out.
+    JEType: 0
+    Weight: 1
+  - Name: Neighbour meet
+    Entry: Mother is struggling and barely has something to eat but at the same time
+      she gives her all and wants her child to have better education.
+    JEType: 0
+    Weight: 3

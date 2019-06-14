@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: New Dialogue
+  m_EditorClassIdentifier: 
+  charactersInfo:
+  - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  messages:
+  - charId: 0
+    text:
+    - Nadya! You are Nadya right?
+    responses: []
+  - charId: 1
+    text:
+    - Yes , can i help you?
+    responses: []
+  - charId: 0
+    text:
+    - 'No Nadya, i am here to help you. The teacher of your son gave me your address. '
+    responses: []
+  - charId: 1
+    text:
+    - But how can you help me ? And why would you?
+    responses: []
+  - charId: 0
+    text:
+    - I know your husband, i know Mahmood. He asked me to help him find you and get
+      you back together. I am a reporter.
+    responses: []
+  - charId: 1
+    text:
+    - 'But how is this possible? '
+    responses: []
+  - charId: 0
+    text:
+    - I guess it is. Where is your son ? What have you been doing lately?
+    responses: []
+  - charId: 1
+    text:
+    - A salesman let me work in his shop for 83 dollars a week. I don't know how i
+      will be able to hold it together anymore. I am worried for my son, he walks
+      to school every day because i can't afford to buy him a ticket and i have to
+      starve sometimes because i don't want my son to starve as well.
+    responses: []
+  - charId: 0
+    text:
+    - You will not have to starve anymore. Your husband is in Europe in The Netherlands.
+      I will help you go to him.
+    responses: []
+  - charId: 1
+    text:
+    - 'I never expected for this day to come. I thought i had lost him forever. '
+    responses: []
+  - charId: 0
+    text:
+    - That you have not. Oh, your son just came home from school !
+    responses: []
+  - charId: 1
+    text:
+    - 'Ibrahim ! Come here dear. This man knows your father! We will see him again. '
+    responses: []
+  - charId: 2
+    text:
+    - When? Where? I want to go now.
+    responses: []
+  - charId: 0
+    text:
+    - We will go, don't worry son. In fact, we are going there right now.
+    responses: []
+  notes:
+  - Name: Nadya
+    Entry: I found Nadya and her son and now i will take them to the Netherlands to
+      see Mahmood.
+    JEType: 0
+    Weight: 0
+  - Name: Nadya
+    Entry: I went to the address given to me by the teacher and i saw Nadya in front
+      of her house. Then her son turned up and i told them i would take them to see
+      Mahmood. What i found out from our first conversation was she had almost lost
+      hope that she and her son would make it
+    JEType: 0
+    Weight: 2
+  - Name: Nadya
+    Entry: I went to the address she was fighting for survival given to me by the
+      teacher and i saw Nadya in front of her house. Then her son turned up and i
+      told them i would take them to see Mahmood. What i found out from our first
+      conversation was
+    JEType: 0
+    Weight: 3
