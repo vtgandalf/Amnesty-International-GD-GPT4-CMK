@@ -16,8 +16,9 @@ MonoBehaviour:
   charactersInfo:
   - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
   - {fileID: 11400000, guid: 8b942ae9c37040148a2fd7c40ecbb7be, type: 2}
+  - {fileID: 11400000, guid: d410065155ba7b040a6e6e302e218a99, type: 2}
   messages:
-  - charId: 1
+  - charId: 3
     text:
     - "Are you Mister\u2026 Jaap?"
     responses: []

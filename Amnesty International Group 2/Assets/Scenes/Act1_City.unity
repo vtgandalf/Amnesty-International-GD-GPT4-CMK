@@ -2232,7 +2232,7 @@ MonoBehaviour:
   doorKnocked: 0
   thoughtAfterFather: {fileID: 11400000, guid: 2e47aa06df779ab419ea2ba1d5fe0a16, type: 2}
   thoughtAfterScene1: {fileID: 11400000, guid: 41281ad3737bf3b409df8f8419449962, type: 2}
-  thoughtAfterScene2: {fileID: 0}
+  thoughtAfterScene2: {fileID: 11400000, guid: 85737736bba753c4b9c33c0fa98b1f33, type: 2}
   journalButton: {fileID: 43166136}
   scene1TP: {fileID: 914981435}
   streetToMosqueTP: {fileID: 1915128460}
