@@ -16,21 +16,24 @@ public class JournalBoxUI : MonoBehaviour
     public Text textOfPage2;
     public GameObject titleOfPage1;
     public GameObject titleOfPage2;
-    private Tabs currentTab = Tabs.Relevant;
+    private Tabs currentTab = Tabs.Quests;
     private int pageIndex = 0;
     public JournalData journalData;
+    public float tabExpandValue = 0.5f;
+    public float normalButtonHeight;
+    public Button relevantButton;
+    public Button storiesButton;
+    public Button questsButton;
+    private Button previousChosenTabButton;
     void Start()
     {
+        if (relevantButton != null)
+        {
+            normalButtonHeight = relevantButton.image.rectTransform.sizeDelta.y;
+        }
+        SetTabToRelevant();
         journalData.UpdateLists();
-        try
-        {
-            DisplayText();
-        }
-        catch
-        {
-            titleOfPage1.GetComponent<Text>().text = "";
-            titleOfPage2.GetComponent<Text>().text = "";
-        }
+        RefreshPages();
     }
 
     // Update is called once per frame
@@ -41,52 +44,55 @@ public class JournalBoxUI : MonoBehaviour
 
     public void SetTabToRelevant()
     {
-        currentTab = Tabs.Relevant;
-        pageIndex = 0;
-        titleOfPage1.SetActive(false);
-        titleOfPage2.SetActive(false);
-        try
+        if (currentTab != Tabs.Relevant)
         {
-            DisplayText();
-        }
-        catch
-        {
-            titleOfPage1.GetComponent<Text>().text = "";
-            titleOfPage2.GetComponent<Text>().text = "";
+            currentTab = Tabs.Relevant;
+            SetTab(relevantButton);
+            if (previousChosenTabButton != null)
+            {
+                ReSetTab(previousChosenTabButton);
+            }
+            previousChosenTabButton = relevantButton;
+            pageIndex = 0;
+            titleOfPage1.SetActive(false);
+            titleOfPage2.SetActive(false);
+            RefreshPages();
         }
     }
 
     public void SetTabToQuests()
     {
-        currentTab = Tabs.Quests;
-        pageIndex = 0;
-        titleOfPage1.SetActive(false);
-        titleOfPage2.SetActive(false);
-        try
+        if (currentTab != Tabs.Quests)
         {
-            DisplayText();
-        }
-        catch
-        {
-            titleOfPage1.GetComponent<Text>().text = "";
-            titleOfPage2.GetComponent<Text>().text = "";
+            currentTab = Tabs.Quests;
+            SetTab(questsButton);
+            if (previousChosenTabButton != null)
+            {
+                ReSetTab(previousChosenTabButton);
+            }
+            previousChosenTabButton = questsButton;
+            pageIndex = 0;
+            titleOfPage1.SetActive(false);
+            titleOfPage2.SetActive(false);
+            RefreshPages();
         }
     }
 
     public void SetTabToStories()
     {
-        currentTab = Tabs.Stories;
-        pageIndex = 0;
-        titleOfPage1.SetActive(true);
-        titleOfPage2.SetActive(true);
-        try
+        if (currentTab != Tabs.Stories)
         {
-            DisplayText();
-        }
-        catch
-        {
-            titleOfPage1.GetComponent<Text>().text = "";
-            titleOfPage2.GetComponent<Text>().text = "";
+            currentTab = Tabs.Stories;
+            SetTab(storiesButton);
+            if (previousChosenTabButton != null)
+            {
+                ReSetTab(previousChosenTabButton);
+            }
+            previousChosenTabButton = storiesButton;
+            pageIndex = 0;
+            titleOfPage1.SetActive(true);
+            titleOfPage2.SetActive(true);
+            RefreshPages();
         }
     }
 
@@ -124,6 +130,20 @@ public class JournalBoxUI : MonoBehaviour
             pageIndex = pageIndex - 2;
         }
         DisplayText();
+    }
+    private void RefreshPages()
+    {
+        try
+        {
+            DisplayText();
+        }
+        catch
+        {
+            titleOfPage1.GetComponent<Text>().text = " ";
+            titleOfPage2.GetComponent<Text>().text = " ";
+            textOfPage1.text = " ";
+            textOfPage2.text = " ";
+        }
     }
 
     private void DisplayText()
@@ -175,4 +195,19 @@ public class JournalBoxUI : MonoBehaviour
         textOfPage1.text = text1;
         textOfPage2.text = text2;
     }
+    private void SetTab(Button tab)
+    {
+        float diff = tab.image.rectTransform.sizeDelta.y * tabExpandValue;
+        tab.image.rectTransform.sizeDelta = new Vector2(tab.image.rectTransform.sizeDelta.x, (tab.image.rectTransform.sizeDelta.y + diff));
+        Vector2 position = new Vector2(tab.image.rectTransform.position.x, (tab.image.rectTransform.position.y + diff));
+        tab.image.rectTransform.position = position;
+    }
+
+    private void ReSetTab(Button tab)
+    {
+        tab.image.rectTransform.sizeDelta = new Vector2(tab.image.rectTransform.sizeDelta.x, normalButtonHeight);
+        Vector2 position = new Vector2(tab.image.rectTransform.position.x, (tab.image.rectTransform.position.y - (normalButtonHeight * tabExpandValue)));
+        tab.image.rectTransform.position = position;
+    }
 }
+
