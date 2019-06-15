@@ -10,12 +10,31 @@ public class SceneProgressTracker : MonoBehaviour
     public int scene2DoorKnockThreshold = 2;
     public bool hasTalkedWithFather = false;
     public bool scene1Completed = false;
+    public bool doorKnocked = false;
     public bool hasTalkedWithNeighbour1 = false;
     public bool scene2Completed = false;
-    public bool doorKnocked = false;
+    public bool hasTalkedWithSalesman = false;
+    public bool scene3Completed = false;
+    public bool hasTalkedWithBeggar = false;
+    public bool scene4Completed = false;
+    public bool hasTalkedWithNeighbour2 = false;
+    public bool scene5Completed = false;
+    public bool hasTalkedWithTeacher = false;
+    public bool scene6Completed = false;
+    public bool hasTalkedWithNadya = false;
+    public bool scene7Completed = false;
     public Dialogue thoughtAfterFather;
     public Dialogue thoughtAfterScene1;
     public Dialogue thoughtAfterScene2;
+    public Dialogue thoughtAfterScene3;
+    public Dialogue thoughtAfterScene4;
+
+    public Dialogue thoughtAfterScene5;
+
+    public Dialogue thoughtAfterScene6;
+    public Dialogue thoughtAfterScene7;
+
+
     public GameObject journalButton;
     public GameObject scene1TP;
     public GameObject streetToMosqueTP;
@@ -30,18 +49,24 @@ public class SceneProgressTracker : MonoBehaviour
         SceneEventHandler.Scene1Event.AddListener(Scene1EventAction);
         SceneEventHandler.Scene2Event.AddListener(Scene2EventAction);
         SceneEventHandler.Scene2DoorKnock.AddListener(Scene2DoorKnockEventAction);
+        SceneEventHandler.Scene3Event.AddListener(Scene3EventAction);
+        SceneEventHandler.Scene4Event.AddListener(Scene4EventAction);
+        SceneEventHandler.Scene5Event.AddListener(Scene5EventAction);
+        SceneEventHandler.Scene6Event.AddListener(Scene6EventAction);
+        SceneEventHandler.Scene7Event.AddListener(Scene7EventAction);
         SceneEventHandler.ConversationWithFatherEvent.AddListener(ConversationWithFatherEventAction);
         SceneEventHandler.ConversationWithNeighbour1Event.AddListener(ConversationWithNeighbour1EventAction);
         SceneEventHandler.ConversationWithSalesmanEvent.AddListener(ConversationWithSalesmanEventAction);
         SceneEventHandler.ConversationWithBeggarEvent.AddListener(ConversationWithBeggarEventAction);
         SceneEventHandler.ConversationWithNeighbour2Event.AddListener(ConversationWithNeighbour2EventAction);
         SceneEventHandler.ConversationWithTeacherEvent.AddListener(ConversationWithTeacherEventAction);
+        SceneEventHandler.ConversationWithNadyaEvent.AddListener(ConversationWithNadyaEventAction);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void Scene1EventAction(bool x)
@@ -52,7 +77,7 @@ public class SceneProgressTracker : MonoBehaviour
 
     private void Scene2EventAction(bool x)
     {
-        if(hasTalkedWithNeighbour1)
+        if (hasTalkedWithNeighbour1)
         {
             scene2Completed = true;
             streetToShopTP.SetActive(true);
@@ -63,15 +88,63 @@ public class SceneProgressTracker : MonoBehaviour
     private void Scene2DoorKnockEventAction(bool x)
     {
         Debug.Log("Door Knocked");
-        if(!scene2Completed)
+        if (!scene2Completed)
         {
             scene2DoorKnockCounter++;
-            if(scene2DoorKnockCounter>=scene2DoorKnockThreshold)
+            if (scene2DoorKnockCounter >= scene2DoorKnockThreshold)
             {
                 Neigbour.SetActive(true);
                 // neighbour comes out
                 // dialogue with neighbour
             }
+        }
+    }
+
+    private void Scene3EventAction(bool x)
+    {
+        if (hasTalkedWithSalesman)
+        {
+            scene3Completed = true;
+            streetToMosqueTP.SetActive(true);
+            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene3);
+        }
+    }
+
+    private void Scene4EventAction(bool x)
+    {
+        if (hasTalkedWithBeggar)
+        {
+            scene4Completed = true;
+            streetToCampTP.SetActive(true);
+            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene4);
+        }
+    }
+
+    private void Scene5EventAction(bool x)
+    {
+        if (hasTalkedWithNeighbour2)
+        {
+            scene5Completed = true;
+            streetToSchoolTP.SetActive(true);
+            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene5);
+        }
+    }
+
+    private void Scene6EventAction(bool x)
+    {
+        if (hasTalkedWithTeacher)
+        {
+            scene6Completed = true;
+            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene6);
+        }
+    }
+
+    private void Scene7EventAction(bool x)
+    {
+        if(hasTalkedWithNadya)
+        {
+            scene7Completed = true;
+            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene7);
         }
     }
 
@@ -96,23 +169,26 @@ public class SceneProgressTracker : MonoBehaviour
 
     private void ConversationWithSalesmanEventAction(bool x)
     {
-
+        hasTalkedWithSalesman = true;
     }
 
     private void ConversationWithBeggarEventAction(bool x)
     {
-
+        hasTalkedWithBeggar = true;
     }
 
     private void ConversationWithNeighbour2EventAction(bool x)
     {
-
+        hasTalkedWithNeighbour2 = true;
     }
 
     private void ConversationWithTeacherEventAction(bool x)
     {
-
+        hasTalkedWithTeacher = true;
     }
 
-
+    private void ConversationWithNadyaEventAction(bool x)
+    {
+        hasTalkedWithNadya = true;
+    }
 }

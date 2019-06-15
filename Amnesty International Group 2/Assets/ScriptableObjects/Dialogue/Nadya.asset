@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
-  m_Name: New Dialogue
+  m_Name: Nadya
   m_EditorClassIdentifier: 
+  title: Nadya
   charactersInfo:
   - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: dc4cc7ce2305ef447bc9e315771ea39d, type: 2}
+  - {fileID: 11400000, guid: 1d79f7eccbef83a42bf1dfb9f5282ee5, type: 2}
   messages:
   - charId: 0
     text:

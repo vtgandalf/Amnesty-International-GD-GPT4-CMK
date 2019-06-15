@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
   m_Name: beggar
   m_EditorClassIdentifier: 
+  title: Beggar
   charactersInfo:
   - {fileID: 11400000, guid: 534df28350bab0042b0e093f23dc48e9, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 90cf5282f4bdc0b4087310b21550d07d, type: 2}
   messages:
   - charId: 0
     text:
@@ -62,11 +63,11 @@ MonoBehaviour:
       begging. The beggar gave me directions where can I find the mother and her son.
     JEType: 2
     Weight: 0
-  - Name: Beggar
+  - Name: Lots of people lost their homes.
     Entry: Because of the war a lot of people lost they home and job.As well him..
     JEType: 0
     Weight: 2
-  - Name: Beggar
+  - Name: He lost his life in a week!
     Entry: He shared with me how life could be that tough you can lose everything
       within a week!
     JEType: 0

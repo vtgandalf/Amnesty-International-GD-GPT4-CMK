@@ -238,5 +238,25 @@ public class DialogueBox : MonoBehaviour
         {
             SceneEventHandler.ConversationWithNeighbour1Event.Invoke(true);
         }
+        if(dialogue.title == "Cashier")
+        {
+            SceneEventHandler.ConversationWithSalesmanEvent.Invoke(true);
+        }
+        if(dialogue.title == "Beggar")
+        {
+            SceneEventHandler.ConversationWithBeggarEvent.Invoke(true);
+        }
+        if(dialogue.title == "Neighbour2")
+        {
+            SceneEventHandler.ConversationWithNeighbour2Event.Invoke(true);
+        }
+        if(dialogue.title == "Teacher")
+        {
+            SceneEventHandler.ConversationWithTeacherEvent.Invoke(true);
+        }
+        if(dialogue.title == "Nadya")
+        {
+            SceneEventHandler.ConversationWithNadyaEvent.Invoke(true);
+        }
     }
 }

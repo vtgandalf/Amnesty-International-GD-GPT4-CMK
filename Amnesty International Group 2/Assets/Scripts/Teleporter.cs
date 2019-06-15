@@ -17,7 +17,9 @@ public class Teleporter : MonoBehaviour
     public bool outOfScene1 = false;
     public bool outOfScene2 = false;
     public bool outOfScene3 = false;
-
+    public bool outOfScene4 = false;
+    public bool outOfScene5and7 = false;
+    public bool outOfScene6 = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && Destination != null)
@@ -44,6 +46,23 @@ public class Teleporter : MonoBehaviour
             if(outOfScene2)
             {
                 SceneEventHandler.Scene2Event.Invoke(true);
+            }
+            if(outOfScene3)
+            {
+                SceneEventHandler.Scene3Event.Invoke(true);
+            }
+            if(outOfScene4)
+            {
+                SceneEventHandler.Scene4Event.Invoke(true);
+            }
+            if(outOfScene5and7)
+            {
+                SceneEventHandler.Scene5Event.Invoke(true);
+                SceneEventHandler.Scene7Event.Invoke(true);
+            }
+            if(outOfScene6)
+            {
+                SceneEventHandler.Scene6Event.Invoke(true);
             }
         }
     }
