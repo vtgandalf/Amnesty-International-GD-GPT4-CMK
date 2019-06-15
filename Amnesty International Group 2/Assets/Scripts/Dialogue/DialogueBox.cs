@@ -233,6 +233,7 @@ public class DialogueBox : MonoBehaviour
         if(dialogue.title == "Door")
         {
             SceneEventHandler.Scene2DoorKnock.Invoke(true);
+            SceneEventHandler.Scene5DoorKnock.Invoke(true);
         }
         if(dialogue.title == "Neighbour1")
         {

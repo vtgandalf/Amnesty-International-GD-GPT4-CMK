@@ -9,6 +9,7 @@ public class Scene2DoorKnock: UnityEvent<bool>{}
 public class Scene3Event: UnityEvent<bool>{}
 public class Scene4Event: UnityEvent<bool>{}
 public class Scene5Event: UnityEvent<bool>{}
+public class Scene5DoorKnock: UnityEvent<bool>{}
 public class Scene6Event: UnityEvent<bool>{}
 public class Scene7Event: UnityEvent<bool>{}
 public class ConversationWithFatherEvent: UnityEvent<bool>{}
@@ -30,6 +31,8 @@ public class SceneEventHandler : ScriptableObject
     public Scene6Event Scene6Event = new Scene6Event();
     public Scene7Event Scene7Event = new Scene7Event();
     public Scene2DoorKnock Scene2DoorKnock = new Scene2DoorKnock();
+    public Scene5DoorKnock Scene5DoorKnock = new Scene5DoorKnock();
+
     public ConversationWithFatherEvent ConversationWithFatherEvent = new ConversationWithFatherEvent();
     public ConversationWithNeighbour1Event ConversationWithNeighbour1Event = new ConversationWithNeighbour1Event();
     public ConversationWithSalesmanEvent ConversationWithSalesmanEvent = new ConversationWithSalesmanEvent();
