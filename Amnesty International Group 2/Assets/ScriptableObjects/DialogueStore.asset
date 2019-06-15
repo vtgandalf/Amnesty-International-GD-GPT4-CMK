@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: DialogueStore
+  m_EditorClassIdentifier: 
+  charactersInfo:
+  - {fileID: 0}
+  - {fileID: 0}
+  messages:
+  - charId: 0
+    text:
+    - Hello , i am a reporter from ...
+    responses: []
+  - charId: 1
+    text:
+    - 'I am not interested in who you are , what do you want ? '
+    responses: []
+  - charId: 0
+    text:
+    - 'Relax sir, I am looking for a woman named Nadya and her son Ibrahim , do these
+      names sound familiar to you? '
+    responses: []
+  - charId: 1
+    text:
+    - No , I've never heard of them.
+    responses: []
+  - charId: 0
+    text:
+    - I have a picture of them...
+    responses: []
+  - charId: 3
+    text:
+    - '"places picture on the counter"'
+    responses: []
+  - charId: 1
+    text:
+    - ' And why would i tell you if i have ? '
+    responses: []
+  - charId: 0
+    text:
+    - I will pay you for the information but it is crucial for me to find them because
+      i want to help them get their family back together.
+    responses: []
+  - charId: 1
+    text:
+    - Very well, i saw her in front of the mosque begging. You can go and check if
+      she is still there.
+    responses: []
+  - charId: 1
+    text:
+    - Very well, i saw her in front of the mosque begging. You can go and check if
+      she is still there.
+    responses: []
+  notes:
+  - Name: 'I spoke with the salesman in the local shop and was informed that he saw
+      the woman begging in front of the mosque.   '
+    Entry: 
+    JEType: 2
+    Weight: 0

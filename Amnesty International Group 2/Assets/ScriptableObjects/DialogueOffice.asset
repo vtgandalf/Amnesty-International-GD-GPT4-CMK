@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
+  m_Name: DialogueOffice
+  m_EditorClassIdentifier: 
+  charactersInfo: []
+  messages:
+  - charId: 1
+    text:
+    - "Are you Mister\u2026  Jaap?"
+    responses: []
+  - charId: 0
+    text:
+    - That is correct. And you sir?
+    responses: []
+  - charId: 1
+    text:
+    - "My name is Mahmood\u2026"
+    responses: []
+  - charId: 1
+    text:
+    - "Please, you must help me and my family\u2026"
+    responses: []
+  - charId: 0
+    text:
+    - Calm down Mahmood, take a seat.
+    responses: []
+  - charId: 0
+    text:
+    - Are you Syrian, Mahmood?
+    responses: []
+  - charId: 1
+    text:
+    - "Yes, I\u2019ve lived in Damascus all my life. It was a beautiful city, and
+      the war destroyed it all. I fled to Jordan with my wife Nadya and my son Ibrahim.M:
+      But living conditions were poor, there is no future there."
+    responses: []
+  - charId: 0
+    text:
+    - And you made the trip to Europe with your family?
+    responses: []
+  - charId: 1
+    text:
+    - "I travelled with families with many children, and they suffered. I couldn\u2019t
+      allow my family to go through that. I hoped to have them relocate to me once
+      I settled here."
+    responses: []
+  - charId: 0
+    text:
+    - But a woman alone with a child, is that safe?
+    responses: []
+  - charId: 1
+    text:
+    - "My brother Karim should be with them. He has been living in Jordan since before
+      the war. I\u2019ve been trying to reach him since I came here, but he doesn\u2019t
+      answer his phone or my letters."
+    responses: []
+  - charId: 0
+    text:
+    - So you have his address at least.
+    responses: []
+  - charId: 1
+    text:
+    - Please, I need to know where my family is. I want to bring them here, to give
+      them a peaceful life.
+    responses: []
+  - charId: 1
+    text:
+    - "My son can\u2019t have a proper education, he has no future there"
+    responses: []
+  - charId: 1
+    text:
+    - Please...
+    responses: []
+  - charId: 0
+    text: []
+    responses: []
+  - charId: 0
+    text: []
+    responses: []
+  notes:
+  - Name: Find Karim
+    Entry: "Mahmood provided me with his brother\u2019s address. His name is Karim,
+      he lives in a poor suburb near a refugee camp. I hope Nadya and Ibrahim are
+      staying at his apartment."
+    JEType: 1
+    Weight: 0
