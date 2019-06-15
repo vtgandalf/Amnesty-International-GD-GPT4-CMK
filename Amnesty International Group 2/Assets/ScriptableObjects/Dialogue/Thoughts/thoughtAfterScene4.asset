@@ -17,6 +17,6 @@ MonoBehaviour:
   messages:
   - charId: 0
     text:
-    - The Camp should be down the street opposite of the shop.
+    - The Camp should be down the road left from the main street.
     responses: []
   notes: []

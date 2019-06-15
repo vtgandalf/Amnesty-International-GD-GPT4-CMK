@@ -17,6 +17,6 @@ MonoBehaviour:
   messages:
   - charId: 0
     text:
-    - The school should be down the road left from the main street.
+    - The school should be down the street opposite of the shop.
     responses: []
   notes: []

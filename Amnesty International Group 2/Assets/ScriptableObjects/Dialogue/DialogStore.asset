@@ -64,6 +64,7 @@ MonoBehaviour:
   notes:
   - Name: 'I spoke with the salesman in the local shop and was informed that he saw
       the woman begging in front of the mosque.   '
-    Entry: 
+    Entry: I spoke with the salesman in the local shop and was informed that he saw
+      the woman begging in front of the mosque.
     JEType: 2
     Weight: 0

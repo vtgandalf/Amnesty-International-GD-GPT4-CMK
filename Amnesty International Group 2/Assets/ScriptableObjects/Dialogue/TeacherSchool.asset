@@ -56,12 +56,12 @@ MonoBehaviour:
     Entry: After speaking with his teacher I found out the adress of the family
     JEType: 2
     Weight: 0
-  - Name: In school
+  - Name: Teacher used to give the boy some money.
     Entry: The teacher shared that sometimes even she gave him money for food, because
       she could not bear to look at him like that.
     JEType: 0
     Weight: 3
-  - Name: In school
+  - Name: The boy has no money for the bus and he walks for hours to get to school
     Entry: I found out the boy was antisocial and very poor.Walks for hours to school
       because he cannot afford a ticket.
     JEType: 0

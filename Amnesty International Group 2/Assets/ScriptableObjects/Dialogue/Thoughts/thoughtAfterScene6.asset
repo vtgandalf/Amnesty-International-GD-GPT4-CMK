@@ -19,8 +19,4 @@ MonoBehaviour:
     text:
     - I should go to the Camp.
     responses: []
-  - charId: 0
-    text:
-    - May be I can buy some from the shop.
-    responses: []
   notes: []

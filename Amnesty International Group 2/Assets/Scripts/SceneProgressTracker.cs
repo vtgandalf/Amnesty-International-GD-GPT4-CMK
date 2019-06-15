@@ -124,9 +124,12 @@ public class SceneProgressTracker : MonoBehaviour
     {
         if (hasTalkedWithNeighbour2)
         {
-            scene5Completed = true;
-            streetToSchoolTP.SetActive(true);
-            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene5);
+            if (!scene5Completed)
+            {
+                scene5Completed = true;
+                streetToSchoolTP.SetActive(true);
+                DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene5);
+            }
         }
     }
 
@@ -141,7 +144,7 @@ public class SceneProgressTracker : MonoBehaviour
 
     private void Scene7EventAction(bool x)
     {
-        if(hasTalkedWithNadya)
+        if (hasTalkedWithNadya)
         {
             scene7Completed = true;
             DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene7);

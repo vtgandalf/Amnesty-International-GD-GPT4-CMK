@@ -87,12 +87,12 @@ MonoBehaviour:
       me the address of the school of the son.
     JEType: 2
     Weight: 0
-  - Name: Neighbour meet
+  - Name: The family moved out because they couldn't pay rent.
     Entry: The mother could not pay rent even though she earned some money by cooking
       for her neighbour and she had to move out.
     JEType: 0
     Weight: 1
-  - Name: Neighbour meet
+  - Name: The mother values education even though the dont have money.
     Entry: Mother is struggling and barely has something to eat but at the same time
       she gives her all and wants her child to have better education.
     JEType: 0
