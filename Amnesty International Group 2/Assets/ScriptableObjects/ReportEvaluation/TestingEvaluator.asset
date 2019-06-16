@@ -12,4 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd27e617344de9b42b21cd1faf9338f8, type: 3}
   m_Name: TestingEvaluator
   m_EditorClassIdentifier: 
-  stories: []
+  stories:
+  - Name: He lost his life in a week!
+    Entry: He shared with me how life could be that tough you can lose everything
+      within a week!
+    JEType: 0
+    Weight: 3
+  - Name: The mother values education even though the dont have money.
+    Entry: Mother is struggling and barely has something to eat but at the same time
+      she gives her all and wants her child to have better education.
+    JEType: 0
+    Weight: 3
+  - Name: The boy has no money for the bus and he walks for hours to get to school
+    Entry: I found out the boy was antisocial and very poor.Walks for hours to school
+      because he cannot afford a ticket.
+    JEType: 0
+    Weight: 2
+  - Name: Nadya
+    Entry: I went to the address given to me by the teacher and i saw Nadya in front
+      of her house. Then her son turned up and i told them i would take them to see
+      Mahmood. What i found out from our first conversation was she had almost lost
+      hope that she and her son would make it
+    JEType: 0
+    Weight: 2

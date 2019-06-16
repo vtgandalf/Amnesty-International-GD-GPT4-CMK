@@ -12,15 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038be9ea1f3e7e643ac82bdd15492185, type: 3}
   m_Name: thoughtAfterScene7
   m_EditorClassIdentifier: 
-  title: 
+  title: end
   charactersInfo: []
   messages:
   - charId: 0
     text:
-    - // GRADE
+    - You successfully found the family and you have been brought back to the Netherlands.
     responses: []
   - charId: 0
     text:
-    - May be I can buy some from the shop.
+    - Here you got a meeting with the father to explain to him the situation of his
+      family.
+    responses: []
+  - charId: 0
+    text:
+    - 'The transfer arrangement of it is already in progress and soon they will see
+      each other from years of oblivion. '
+    responses: []
+  - charId: 0
+    text:
+    - 'Meanwhile your report has been posted in the news and is now publicly available.
+      Based on your choices your report had the following impact:'
     responses: []
   notes: []

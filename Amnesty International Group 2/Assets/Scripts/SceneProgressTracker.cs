@@ -35,18 +35,19 @@ public class SceneProgressTracker : MonoBehaviour
 
     public Dialogue thoughtAfterScene6;
     public Dialogue thoughtAfterScene7;
-
-
+    public Dialogue evaluation;
     public GameObject journalButton;
     public GameObject scene1TP;
     public GameObject streetToMosqueTP;
     public GameObject streetToSchoolTP;
     public GameObject streetToCampTP;
     public GameObject streetToShopTP;
+    public GameObject storeBarrier;
     public GameObject Father;
     public GameObject Neighbour1;
     public GameObject Neighbour2;
     public GameObject Nadya;
+    public ReportEvaluation ReportEvaluation;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +61,7 @@ public class SceneProgressTracker : MonoBehaviour
         SceneEventHandler.Scene5Event.AddListener(Scene5EventAction);
         SceneEventHandler.Scene6Event.AddListener(Scene6EventAction);
         SceneEventHandler.Scene7Event.AddListener(Scene7EventAction);
+        SceneEventHandler.ThoughtAfterScene7.AddListener(ThoughtAfterScene7Action);
         SceneEventHandler.ConversationWithFatherEvent.AddListener(ConversationWithFatherEventAction);
         SceneEventHandler.ConversationWithNeighbour1Event.AddListener(ConversationWithNeighbour1EventAction);
         SceneEventHandler.ConversationWithSalesmanEvent.AddListener(ConversationWithSalesmanEventAction);
@@ -77,18 +79,25 @@ public class SceneProgressTracker : MonoBehaviour
 
     private void Scene1EventAction(bool x)
     {
-        scene1Completed = true;
-        DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene1);
+        if(!scene1Completed)
+        {
+            scene1Completed = true;
+            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene1);
+        }
     }
 
     private void Scene2EventAction(bool x)
     {
         if (hasTalkedWithNeighbour1)
         {
-            scene2Completed = true;
-            streetToShopTP.SetActive(true);
-            Neighbour1.SetActive(false);
-            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene2);
+            if(!scene2Completed)
+            {
+                scene2Completed = true;
+                streetToShopTP.SetActive(true);
+                Neighbour1.SetActive(false);
+                storeBarrier.SetActive(false);
+                DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene2);
+            }
         }
     }
 
@@ -111,9 +120,12 @@ public class SceneProgressTracker : MonoBehaviour
     {
         if (hasTalkedWithSalesman)
         {
-            scene3Completed = true;
-            streetToMosqueTP.SetActive(true);
-            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene3);
+            if(!scene3Completed)
+            {
+                scene3Completed = true;
+                streetToMosqueTP.SetActive(true);
+                DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene3);
+            }
         }
     }
 
@@ -121,9 +133,12 @@ public class SceneProgressTracker : MonoBehaviour
     {
         if (hasTalkedWithBeggar)
         {
-            scene4Completed = true;
-            streetToCampTP.SetActive(true);
-            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene4);
+            if(!scene4Completed)
+            {
+                scene4Completed = true;
+                streetToCampTP.SetActive(true);
+                DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene4);
+            }
         }
     }
 
@@ -163,9 +178,12 @@ public class SceneProgressTracker : MonoBehaviour
     {
         if (hasTalkedWithTeacher)
         {
-            scene6Completed = true;
-            Nadya.SetActive(true);
-            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene6);
+            if(!scene6Completed)
+            {
+                scene6Completed = true;
+                Nadya.SetActive(true);
+                DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene6);
+            }
         }
     }
 
@@ -173,8 +191,11 @@ public class SceneProgressTracker : MonoBehaviour
     {
         if (hasTalkedWithNadya)
         {
-            scene7Completed = true;
-            DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene7);
+            if(!scene7Completed)
+            {
+                scene7Completed = true;
+                DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene7);
+            }
         }
     }
 
@@ -220,5 +241,26 @@ public class SceneProgressTracker : MonoBehaviour
     private void ConversationWithNadyaEventAction(bool x)
     {
         hasTalkedWithNadya = true;
+        DialogueEventCaller.DialogueEvent.Invoke(thoughtAfterScene7);
+    }
+
+    private void ThoughtAfterScene7Action(bool x)
+    {
+        float grade = ReportEvaluation.Grade;
+        string ev = " ";
+        if(grade < 0.5f)
+        {
+            ev = "Your report had little to no impact! At least you helped a family :)";
+        }
+        if(grade >= 0.5f && grade < 0.75f)
+        {
+            ev = "Your report was very good and you inspired people to show support to refugees!";
+        }
+        if(grade >= 0.75f)
+        {
+            ev = "Your report was excelent! A lot of investors got interested and donated a lot of money to multiple refugee camps!";
+        }
+        evaluation.messages[0].text[0] = ev;
+        DialogueEventCaller.DialogueEvent.Invoke(evaluation);
     }
 }

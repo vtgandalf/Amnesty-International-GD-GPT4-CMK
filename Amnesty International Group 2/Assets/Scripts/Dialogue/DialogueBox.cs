@@ -27,6 +27,7 @@ public class DialogueBox : MonoBehaviour
     // Start is called before the first frame update
     public DialogueEventCaller dialogEC;
     public SceneEventHandler SceneEventHandler;
+    public SceneProgressTracker SceneProgressTracker;
     void Start()
     {
         mainPanel.SetActive(false);
@@ -220,7 +221,10 @@ public class DialogueBox : MonoBehaviour
         dialogEC.Dialogging = false;
         optionPanel.SetActive(false);
         mainPanel.SetActive(false);
-        touchControlsUI.SetActive(true);
+        if(!SceneProgressTracker.hasTalkedWithNadya)
+        {
+            touchControlsUI.SetActive(true);
+        }
         TakeAnActionBasedOnDialog();
     }
 
@@ -258,6 +262,10 @@ public class DialogueBox : MonoBehaviour
         if(dialogue.title == "Nadya")
         {
             SceneEventHandler.ConversationWithNadyaEvent.Invoke(true);
+        }
+        if(dialogue.title == "end")
+        {
+            SceneEventHandler.ThoughtAfterScene7.Invoke(true);
         }
     }
 }

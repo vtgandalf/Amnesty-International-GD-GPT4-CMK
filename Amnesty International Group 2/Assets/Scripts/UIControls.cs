@@ -11,7 +11,7 @@ public class UIControls : MonoBehaviour
 
     void Start()
     {
-
+        Teleporter.OnTeleport.AddListener(ResetControls);
     }
     public void UpdateHorizontal(float value)
     {
@@ -26,5 +26,12 @@ public class UIControls : MonoBehaviour
     public void UpdateAction(bool value)
     {
         Action = value;
+    }
+
+    private void ResetControls()
+    {
+        Horizontal = 0f;
+        Vertical = 0f;
+        Action = false;
     }
 }
