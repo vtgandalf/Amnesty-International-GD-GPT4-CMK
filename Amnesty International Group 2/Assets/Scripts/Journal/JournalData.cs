@@ -12,6 +12,13 @@ public class JournalData : ScriptableObject
     private List<JournalEntry> objectves = new List<JournalEntry>();
     private List<JournalEntry> notes = new List<JournalEntry>();
 
+    private void OnEnable() {
+        Entries = new List<JournalEntry>();
+        stories = new List<JournalEntry>();
+        objectves = new List<JournalEntry>();
+        notes = new List<JournalEntry>();
+    }
+
     public void AddEntry(JournalEntry entry)
     {
         if (!Entries.Contains(entry))

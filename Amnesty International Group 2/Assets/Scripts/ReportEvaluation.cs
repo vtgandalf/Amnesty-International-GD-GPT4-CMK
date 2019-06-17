@@ -7,6 +7,10 @@ public class ReportEvaluation : ScriptableObject
 {
     public List<JournalEntry> stories = new List<JournalEntry>();
     private float grade = 0f;
+
+    private void OnEnable() {
+        stories = new List<JournalEntry>();
+    }
     public void AddStory(JournalEntry entry)
     {
         if (!stories.Contains(entry))
