@@ -80,19 +80,19 @@ MonoBehaviour:
     - We will go, don't worry son. In fact, we are going there right now.
     responses: []
   notes:
-  - Name: Nadya
+  - Name: I have found the family and take them to Netherlands
     Entry: I found Nadya and her son and now i will take them to the Netherlands to
       see Mahmood.
     JEType: 0
     Weight: 0
-  - Name: Nadya
+  - Name: I brought hope to the family that they will see Mahmood again.
     Entry: I went to the address given to me by the teacher and i saw Nadya in front
       of her house. Then her son turned up and i told them i would take them to see
       Mahmood. What i found out from our first conversation was she had almost lost
       hope that she and her son would make it
     JEType: 0
     Weight: 2
-  - Name: Nadya
+  - Name: After fight for survival the family will finally reunite
     Entry: I went to the address she was fighting for survival given to me by the
       teacher and i saw Nadya in front of her house. Then her son turned up and i
       told them i would take them to see Mahmood. What i found out from our first

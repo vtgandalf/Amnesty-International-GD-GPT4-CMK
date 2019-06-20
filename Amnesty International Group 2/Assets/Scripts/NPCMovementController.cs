@@ -77,7 +77,11 @@ public class NPCMovementController : MonoBehaviour
 
     private void FollowMarkers(List<GameObject> _markers)
     {
-        GoTo(_markers[position].transform.position);
+        try { GoTo(_markers[position].transform.position); }
+        catch
+        {
+
+        }
         if (previousTargetReached != movement.TargetHasBeenReached)
         {
             previousTargetReached = movement.TargetHasBeenReached;
