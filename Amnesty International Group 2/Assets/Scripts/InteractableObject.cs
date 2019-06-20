@@ -9,15 +9,32 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private SpriteRenderer emoteRenderer;
     [SerializeField] private Sprite[] emotes;
+    public bool shouldTalkOnlyOnce = false;
+    private bool alreadyTalked = false;
     public void Interact(Vector3 playerPos)
     {
         if (dialogue)
         {
-            RotateToPlayer(playerPos); // Function not finished
-            DialogueEC.DialogueEvent.Invoke(dialogue);
-            DialogueEC.DialogueEvent.AddListener(EndDialog);
-            DialogueEC.EmoteEvent.AddListener(SetActiveEmote);
-            SetActiveEmote(-1);
+            if(shouldTalkOnlyOnce)
+            {
+                if(!alreadyTalked)
+                {
+                    alreadyTalked = true;
+                    RotateToPlayer(playerPos); // Function not finished
+                    DialogueEC.DialogueEvent.Invoke(dialogue);
+                    DialogueEC.DialogueEvent.AddListener(EndDialog);
+                    DialogueEC.EmoteEvent.AddListener(SetActiveEmote);
+                    SetActiveEmote(-1);
+                }
+            }
+            else
+            {
+                RotateToPlayer(playerPos); // Function not finished
+                DialogueEC.DialogueEvent.Invoke(dialogue);
+                DialogueEC.DialogueEvent.AddListener(EndDialog);
+                DialogueEC.EmoteEvent.AddListener(SetActiveEmote);
+                SetActiveEmote(-1);
+            }
         }
     }
 
@@ -63,24 +80,57 @@ public class InteractableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (shouldTalkOnlyOnce)
         {
-            if (dialogue != null)
+            if (!alreadyTalked)
             {
-                InteractEC.InteractEvent.AddListener(Interact);
+                if (other.CompareTag("Player"))
+                {
+                    if (dialogue != null)
+                    {
+                        InteractEC.InteractEvent.AddListener(Interact);
 
-                SetActiveEmote(0);
+                        SetActiveEmote(0);
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (other.CompareTag("Player"))
+            {
+                if (dialogue != null)
+                {
+                    InteractEC.InteractEvent.AddListener(Interact);
+
+                    SetActiveEmote(0);
+                }
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (shouldTalkOnlyOnce)
         {
-            InteractEC.InteractEvent.RemoveListener(Interact);
+            if (!alreadyTalked)
+            {
+                if (other.CompareTag("Player"))
+                {
+                    InteractEC.InteractEvent.RemoveListener(Interact);
 
-            SetActiveEmote(-1);
+                    SetActiveEmote(-1);
+                }
+            }
+        }
+        else
+        {
+            if (other.CompareTag("Player"))
+            {
+                InteractEC.InteractEvent.RemoveListener(Interact);
+
+                SetActiveEmote(-1);
+            }      
         }
     }
 }

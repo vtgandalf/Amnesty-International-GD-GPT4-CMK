@@ -73,13 +73,32 @@ MonoBehaviour:
     text:
     - 
     responses: []
+  - charId: 1
+    text:
+    - My brother Karim should be with them. He has been living in Jordan since before
+      the war.
+    responses: []
+  - charId: 1
+    text:
+    - "I\u2019ve been trying to reach him since I came here, but he doesn\u2019t answer
+      his phone or my letters."
+    responses: []
   - charId: 0
     text:
     - So you have his address at least
     responses: []
-  - charId: 0
+  - charId: 1
     text:
-    - '*I should better get going*'
+    - Please, I need to know where my family is. I want to bring them here, to give
+      them a peaceful life.
+    responses: []
+  - charId: 1
+    text:
+    - "My son can\u2019t have a proper education, he has no future there."
+    responses: []
+  - charId: 1
+    text:
+    - "Please\u2026"
     responses: []
   notes:
   - Name: Address Of the Brother

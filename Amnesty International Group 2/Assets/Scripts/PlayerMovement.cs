@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        if (touchControls)
+        /*if (touchControls)
         {
             if (touchUI.Action)
             {
@@ -44,6 +44,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 InteractEC.InteractEvent.Invoke(this.gameObject.transform.position);
             }
+        }*/
+        if (touchUI.Action)
+        {
+            InteractEC.InteractEvent.Invoke(this.gameObject.transform.position);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractEC.InteractEvent.Invoke(this.gameObject.transform.position);
         }
     }
 
@@ -54,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         float moveHorizontal = 0f;
         float moveVertical = 0f;
-        if (touchControls)
+        /*if (touchControls)
         {
             moveHorizontal = touchUI.Horizontal;
             moveVertical = touchUI.Vertical;
@@ -63,7 +71,11 @@ public class PlayerMovement : MonoBehaviour
         {
             moveHorizontal = Input.GetAxisRaw("Horizontal");
             moveVertical = Input.GetAxisRaw("Vertical");
-        }
+        }*/
+        moveHorizontal = touchUI.Horizontal;
+        moveVertical = touchUI.Vertical;
+        moveHorizontal += Input.GetAxisRaw("Horizontal");
+        moveVertical += Input.GetAxisRaw("Vertical");
         PlayAnimationsWalking(moveHorizontal, moveVertical);
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 

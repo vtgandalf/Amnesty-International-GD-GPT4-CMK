@@ -21,6 +21,8 @@ public class DialogueBox : MonoBehaviour
     private bool hasInfo = false;
     public ReportEvaluation evaluator;
     public GameObject touchControlsUI;
+    public GameObject journalButton;
+    public GameObject manuButton;
 
     public JournalData journal;
     //private Message response;
@@ -40,6 +42,8 @@ public class DialogueBox : MonoBehaviour
         {
             return;
         }
+        journalButton.SetActive(false);
+        manuButton.SetActive(false);
         touchControlsUI.transform.GetChild(1).GetComponent<UIControls>().UpdateAction(false);
         touchControlsUI.SetActive(false);
         dialogEC.Dialogging = true;
@@ -221,6 +225,8 @@ public class DialogueBox : MonoBehaviour
         dialogEC.Dialogging = false;
         optionPanel.SetActive(false);
         mainPanel.SetActive(false);
+        journalButton.SetActive(true);
+        manuButton.SetActive(true);
         if(!SceneProgressTracker.hasTalkedWithNadya)
         {
             touchControlsUI.SetActive(true);
